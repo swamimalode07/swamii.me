@@ -37,11 +37,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Swami's Portfolio",
     description: "Swami's Portfolio site.",
-    url: "https://swamimalode.online",
+    url: "https://swamii.me",
     siteName: "Swami's Portfolio site",
     images: [
       {
-        url: "https://swamimalode.online/opengraphh.jpg",
+        url: "https://swamii.me/opengraphh.jpg",
         width: 1200,
         height: 630,
         alt: "My OG Image",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "My portfoliosite",
     description: "This is my portfolio.",
-    images: ["https://swamimalode.online/opengraphh.jpg"],
+    images: ["https://swamii.me/opengraphh.jpg"],
     creator: "@SwamiMalode",
   },
 };
@@ -63,7 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        <link rel="canonical" href="https://swamimalode.online" />
+        <link rel="canonical" href="https://swamii.me" />
 
         <script
           type="application/ld+json"
@@ -72,14 +72,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Swami Malode",
-              url: "https://swamimalode.online",
+              url: "https://swamii.me",
               sameAs: [
                 "https://github.com/swamimalode07",
                 "https://linkedin.com/in/swamimalode",
                 "https://x.com/swamimalode",
               ],
               jobTitle: "Frontend Developer & UI/UX Designer",
-              image: "https://swamimalode.online/opengraphh.jpg",
+              image: "https://swamii.me/opengraphh.jpg",
             }),
           }}
         />

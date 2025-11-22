@@ -26,7 +26,7 @@ const ProjectsPage = () => {
       year: "2025",
       image: "/ghosttype.png",
       github: "swamimalode07/ghosttype",
-      live: "https://ghosttype.swamimalode.online",
+      live: "https://ghosttype.swamii.me",
     },
     {
       id: 2,
@@ -38,7 +38,7 @@ const ProjectsPage = () => {
       year: "2025",
       image: "/layers.png",
       github: "swamimalode07/SaaS-Landing-Page",
-      live: "https://landing.swamimalode.online",
+      live: "https://landing.swamii.me",
     },
     {
       id: 3,
