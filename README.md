@@ -1,6 +1,6 @@
 # Swami's Portfolio
 
-[swamimalode.online](https://swamimalode.online) – A personal portfolio to showcase my work, projects, and UI/UX designs as a Full Stack Developer and Design Engineer.
+[swamii.me](https://swamii.me) – A personal portfolio to showcase my work, projects, and UI/UX designs as a Full Stack Developer and Design Engineer.
 
 ---
 
@@ -21,7 +21,7 @@ This is a minimal, modern, and responsive portfolio built with the latest web te
 
 ## Live Site
 
-Check it out: [swamimalode.online](https://swamimalode.online)
+Check it out: [swamii.me](https://swamii.me)
 
 ---
 
@@ -51,12 +51,12 @@ To run locally:
 
 ```bash
 # Clone the repo
-git clone https://github.com/swamimalode07/swamimalode.online.git
-cd swamimalode.online
+git clone https://github.com/swamimalode07/swamii.me.git
+cd swamii.me
 
 # Install dependencies
-pnpm install   # or use npm install if you prefer
+npm install   
 
 
 # Run development server
-pnpm dev       # or npm run dev
+npm run dev  
