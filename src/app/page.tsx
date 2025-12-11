@@ -61,7 +61,7 @@ const page = () => {
               />
               <Separator />
                <Heading heading="Github Graph" />
-              <Graph/>
+              {/* <Graph/> */}
               <Separator />
               <Heading heading="About Me" />
               <About />
