@@ -111,7 +111,7 @@ const Taskbar = () => {
             hovered ? "max-w-xs opacity-100" : "max-w-0 opacity-0"
           }`}
         >
-          Intern at Conduit
+          Open to work
         </span>
       </div>
     </div>
