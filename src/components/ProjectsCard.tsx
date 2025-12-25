@@ -75,15 +75,12 @@ const ProjectsCard: React.FC<ProjectsCardProps> = ({
         </div>
         {isHovered && url && (
           <div
-            className="pointer-events-none fixed z-50 flex -translate-x-1/2 -translate-y-full transform items-center gap-2 rounded-xl border border-gray-700 bg-[#1C1C1F]/95 px-4 py-2 text-sm font-medium text-white shadow-2xl backdrop-blur-md transition-all duration-200 ease-out"
+            className="pointer-events-none fixed z-50 flex transform items-center gap-2 rounded-xl border border-gray-700 bg-[#1C1C1F]/95 px-4 py-2 text-sm font-medium text-white shadow-2xl backdrop-blur-md transition-all duration-200 ease-out"
             style={{
-              left:
-                cursorPos.x +
-                (cardRef.current?.getBoundingClientRect().left || 0),
-              top:
-                cursorPos.y +
-                (cardRef.current?.getBoundingClientRect().top || 0) -
-                20,
+              willChange: "transform",
+              transform: `translate(calc(-50% + ${cursorPos.x + (cardRef.current?.getBoundingClientRect().left || 0)}px), calc(-100% + ${cursorPos.y + (cardRef.current?.getBoundingClientRect().top || 0) - 20}px))`,
+              left: 0,
+              top: 0,
             }}
           >
             Visit Site
