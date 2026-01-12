@@ -150,8 +150,8 @@ const ArtGallery = () => {
           </div>
 
           {/* Video Gallery */}
-          <div className="mx-auto max-w-5xl px-6 py-16 pb-24 sm:max-w-[60%]">
-            <div className="space-y-16">
+          <div className="mx-auto max-w-5xl px-6 py-6 pb-24 sm:max-w-[60%]">
+            <div className="space-y-6">
               {projects.map((project) => (
                 <VideoFrame
                   key={project.id}
