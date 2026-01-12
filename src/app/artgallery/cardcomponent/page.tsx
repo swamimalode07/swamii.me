@@ -1,12 +1,24 @@
+'use client';
+
+import { useRouter } from 'next/navigation';
 import { FaRegUserCircle } from 'react-icons/fa';
 import { MdOutlineAutoGraph } from "react-icons/md";
 import { IoGlobeOutline, IoKeypad } from "react-icons/io5";
 import { HiOutlineGlobe } from "react-icons/hi";
 import { TbProgressCheck } from "react-icons/tb";
+import { ArrowLeft } from 'lucide-react';
 
 export default function Home() {
+  const router = useRouter();
   return (
       <div className="flex justify-center min-h-screen items-center bg-black">
+         <button
+        onClick={() => router.push('/artgallery')}
+        className="absolute top-5 left-5 flex items-center gap-2 text-white bg-white/10 hover:bg-white/20 px-4 py-2 rounded-xl backdrop-blur-lg border border-white/15 transition-all"
+      >
+        <ArrowLeft size={18} />
+        Back to Gallery
+      </button>  
         <div className="
             w-150 h-130 rounded-lg
             bg-[radial-gradient(circle,rgba(152,66,35,0.5)_1px,transparent_0.001px),linear-gradient(to_top_right,#F7A404_0%,#C94802_20%,#010101_65%)]
