@@ -121,7 +121,7 @@ const ArtGallery = () => {
     },
     {
       id: 2,
-      videoUrl: "video/cardcomponent.mp4",
+      videoUrl: "video/card.mp4",
       liveUrl: "https://swamii.me/artgallery/cardcomponent",
       twitterUrl: "https://swamii.me",
     }
