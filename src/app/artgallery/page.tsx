@@ -29,7 +29,7 @@ const VideoFrame: React.FC<VideoFrameProps> = ({
 
   return (
     <div
-      className="group relative mx-auto max-w-[650px] overflow-hidden rounded-2xl outline outline-2 outline-offset-4 outline-[#1C1C1F]"
+      className="group relative mx-auto max-w-[650px] overflow-hidden rounded-2xl outline outline-offset-4 outline-[#1C1C1F]"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -122,7 +122,7 @@ const ArtGallery = () => {
     {
       id: 2,
       videoUrl: "video/cardcomponent.mp4",
-      liveUrl: "https://swamii.me/artgallery/cardcomponent" ,
+      liveUrl: "https://swamii.me/artgallery/cardcomponent",
       twitterUrl: "https://swamii.me",
     }
   ];
