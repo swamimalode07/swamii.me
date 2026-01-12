@@ -119,6 +119,12 @@ const ArtGallery = () => {
       liveUrl: "https://swamii.me/artgallery/foldercomponent",
       twitterUrl: "https://x.com/SwamiMalode/status/1987369556470341668?s=20",
     },
+    {
+      id: 2,
+      videoUrl: "video/cardcomponent.mp4",
+      liveUrl: "https://swamii.me/artgallery/cardcomponent",
+      twitterUrl: "https://swamii.me",
+    }
   ];
     const router= useRouter()
 
