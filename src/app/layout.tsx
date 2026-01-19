@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "My portfoliosite",
+    title: "Swami's Portfolio",
     description: "This is my portfolio.",
     images: ["https://swamii.me/opengraphh.jpg"],
     creator: "@SwamiMalode",
@@ -87,9 +87,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
       <link rel="icon" href="/logo.ico" />
 
-      <body
-        className={` ${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} antialiased`}
-      >
+      <body className={` ${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} antialiased`}>
         {children}
         <Analytics />
         <Databuddy
