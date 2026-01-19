@@ -4,7 +4,7 @@ import "./globals.css";
 import { Space_Grotesk } from "next/font/google";
 import CustomCursor from "@/components/CustomCursor";
 import { Analytics } from "@vercel/analytics/next";
-import { Databuddy } from "@databuddy/sdk";
+import { Databuddy } from '@databuddy/sdk/react';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -91,23 +91,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         className={` ${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} antialiased`}
       >
         {children}
-
         <Analytics />
-
         <Databuddy
-          clientId={process.env.NEXT_PUBLIC_DATABUDDY_CLIENT_ID as string}
-          trackHashChanges={true}
-          trackAttributes={true}
-          trackInteractions={true}
-          trackEngagement={true}
-          trackScrollDepth={true}
-          trackExitIntent={true}
-          trackBounceRate={true}
-          trackWebVitals={true}
-          trackErrors={true}
-          enableBatching={true}
-        />
-
+        clientId={process.env.NEXT_PUBLIC_DATABUDDY_CLIENT_ID || ""}
+        trackHashChanges={true}
+        trackAttributes={true}
+        trackOutgoingLinks={true}
+        trackInteractions={true}
+        trackScrollDepth={true}
+        trackWebVitals={true}
+        trackErrors={true}
+      />
         <CustomCursor />
       </body>
     </html>
