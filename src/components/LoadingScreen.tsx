@@ -11,7 +11,7 @@ const WordPreloader = ({ onFinish }: { onFinish: () => void }) => {
 
       const timer = setTimeout(
         () => setCurrentWordIndex((prev) => prev + 1),
-        200
+        600
       );
       return () => clearTimeout(timer);
     } else {
@@ -32,17 +32,20 @@ const WordPreloader = ({ onFinish }: { onFinish: () => void }) => {
       }`}
     >
      
-      <div className="relative h-40 flex items-center justify-center">
+      <div className="relative h-40 flex items-center justify-center font-space-grotesk">
         {words.map((word, index) => (
           <div
             key={index}
             className={`absolute transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
               index === currentWordIndex
-                ? "opacity-100 translate-y-0 scale-100 blur-0" 
-                : "opacity-0 translate-y-6 scale-95 blur-sm"
+                ? "opacity-100 " 
+                : "opacity-0 "
             }`}
           >
-            <h1 className="text-white text-6xl sm:text-7xl font-space-grotesk-700 tracking-tight">
+            <h1 className="flex items-center gap-4 text-white text-5xl  font-space-grotesk-700 tracking-tight leading-none">
+              <span className="scale-50">
+                ●
+              </span>
               {word}
             </h1>
           </div>
