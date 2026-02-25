@@ -25,6 +25,12 @@ Check it out: [swamii.me](https://swamii.me)
 
 ---
 
+## Github Stars
+
+[![RepoStars](https://repostars.dev/api/embed?repo=swamimalode07%2Fswamii.me&theme=synthwave)](https://repostars.dev/?repos=swamimalode07%2Fswamii.me&theme=synthwave)
+
+---
+
 ## Tech Stack
 
 - **Framework:** Next.js 15 + TypeScript  
