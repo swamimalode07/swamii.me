@@ -75,6 +75,8 @@
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
   --color-grey: var(--grey);
+  --color-borderGrey: var(--border-grey);
+  --color-secondary: var(--text-secondary);
 }
 
 @layer base {
@@ -146,6 +148,8 @@
   --grey:oklch(0.19 0 0);
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
+  --border-grey: #424244;
+  --text-secondary:#9F9FA9;
 }
 
 .dark {

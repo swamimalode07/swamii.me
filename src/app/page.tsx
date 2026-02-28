@@ -61,13 +61,10 @@ const page = () => {
                 ]}
                 skills={["HTML", "Tailwind CSS", "SEO"]}
               />
-              <Separator />
                <SectionHeading title="Github Graph" />
                <Graph/> 
-              <Separator />
               <SectionHeading title="About Me" />
               <About />
-              <Separator />
               <ContactSection />
             </div>
         </div>

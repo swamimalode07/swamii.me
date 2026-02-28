@@ -1,6 +1,8 @@
 import React from "react";
 import { FileDown, Calendar } from "lucide-react";
 import Image from "next/image";
+import { Button } from "./ui/button";
+import RingButton from "./RingButton";
 
 const HeroSection = () => {
   return (
@@ -15,43 +17,14 @@ const HeroSection = () => {
               I build for the web.
             </p>
 
-            <p className="font-space-grotesk mt-4 w-full text-sm text-[#A4A4A4] sm:mt-6 sm:w-[80%] sm:text-base md:mt-8 md:w-[70%] md:text-lg lg:w-[60%] lg:text-xl xl:w-[45%] xl:text-2xl">
+            <p className="font-space-grotesk mt-4 w-full text-sm text-secondary sm:mt-6 sm:w-[80%] sm:text-base md:mt-2 md:w-[70%] md:text-lg lg:w-[60%] lg:text-xl xl:w-[45%] xl:text-2xl">
               I build Websites that look and feel good to use. Specialized in
               Full Stack Development and UI & UX Design
             </p>
 
-            <div className="mt-4 flex flex-wrap gap-3 sm:mt-6 md:mt-8">
-              <a
-                href="/Swami_Malode_Resume.pdf"
-                download="Swami-Malode-Resume.pdf"
-                className="group inline-flex items-center gap-2 rounded-full border border-[#2A2A2A] bg-[#181818] px-5 py-3 text-sm text-gray-300 transition-all duration-300 hover:border-[#3A3A3A] hover:bg-[#1F1F1F] hover:text-white"
-              >
-                <span className="font-medium">Download Resume</span>
-                <FileDown
-                  size={18}
-                  strokeWidth={1.25}
-                  className="text-gray-400 transition-colors duration-300 group-hover:text-white"
-                />
-              </a>
-
-              <a
-                href="https://cal.com/swamimalode"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3 rounded-full border border-[#2A2A2A] bg-[#181818] px-5 py-3 text-base text-gray-300 transition-all duration-300 hover:-translate-y-[1px] hover:border-[#3A3A3A] hover:bg-[#1F1F1F] hover:text-white"
-              >
-                <span className="font-medium tracking-wide">Book a Meet</span>
-
-                <div className="relative flex items-center">
-                  <Image
-                    src="/logo.ico"
-                    alt="Meet logo"
-                    width={22}
-                    height={22}
-                    className="opacity-80 transition-opacity duration-300 group-hover:opacity-100"
-                  />
-                </div>
-              </a>
+            <div className="mt-4 flex flex-wrap gap-3 md:gap-6 sm:mt-6 md:mt-8">
+                <RingButton text="View my Work" href="https://swamii.me" icon={FileDown}/>
+                <RingButton text="Book a Meeting" href="https://swamii.me" icon={Calendar} />
             </div>
           </div>
         </div>
