@@ -27,16 +27,14 @@ const page = () => {
         <LoadingScreen onFinish={() => setLoading(false)} />
       ) : (
         <Container>
-          
-        <div className="w-full">
+
+          <div className="w-full">
             <div className="text-white">
               <Navbar />
               <HeroSection />
-              <SectionHeading title="Skills" />
-              <SkillsSection />
               <SectionHeading title="Projects" />
-                <ProjectsSection />
-              <SectionHeading title="Experience" />
+              <ProjectsSection />
+               <SectionHeading title="Experience" />
               <ExperienceSection
                 logo="/conduit.png"
                 title="Conduit Commerce"
@@ -61,17 +59,20 @@ const page = () => {
                 ]}
                 skills={["HTML", "Tailwind CSS", "SEO"]}
               />
-               <SectionHeading title="Github Graph" />
-               <Graph/> 
+              <SectionHeading title="Skills" />
+              <SkillsSection />
+             
+              <SectionHeading title="Github Graph" />
+              <Graph />
               <SectionHeading title="About Me" />
               <About />
               <ContactSection />
             </div>
-        </div>
+          </div>
         </Container>
       )}
-     {loading ||   <Taskbar />}
-      
+      {loading || <Taskbar />}
+
     </div>
   );
 };
