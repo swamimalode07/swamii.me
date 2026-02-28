@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between px-4 py-4 sm:px-6">
           <p className="font-space-grotesk-700 font-sans text-lg font-semibold text-white sm:text-xl">
             @code by SWAMI
-          </p>
+          </p> 
 
           <div className="flex items-center gap-3 sm:gap-6 lg:gap-8">
             <div className="hidden items-center gap-6 md:flex lg:gap-8">
@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
               </button>
             </div>
 
-            <button
+            {/* <button
               onClick={toggleCommandMenu}
               className="hidden items-center gap-3 rounded-lg border-2 border-[#252528] bg-black px-4 py-2.5 text-gray-400 transition-all duration-200 hover:border-gray-500 hover:text-gray-300 md:flex"
             >
@@ -78,7 +78,7 @@ const Navbar: React.FC = () => {
                   K
                 </kbd>
               </div>
-            </button>
+            </button> */}
 
             {/* <div className="md:hidden sm:hidden scale-75 origin-right">
               <Searchbox />

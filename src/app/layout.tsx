@@ -100,7 +100,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         trackWebVitals={true}
         trackErrors={true}
       />
-        <CustomCursor />
+        {/* <CustomCursor /> */}
       </body>
     </html>
   );
