@@ -22,7 +22,7 @@ const RulerLines = ({ variant = 'left' }: RulerLinesProps) => {
 
   const majorInterval = 100
   const minorInterval = 10
-  const width = 24
+  const width = 30
 
   const ticks = []
 
@@ -59,7 +59,7 @@ const RulerLines = ({ variant = 'left' }: RulerLinesProps) => {
       ref={ref}
       className="hidden md:block"
       style={{
-        position: 'absolute',
+        position: 'relative',
         top: 0,
         [variant]: 0,
         height: '100%',
