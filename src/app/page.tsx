@@ -14,6 +14,10 @@ import LoadingScreen from "@/components/LoadingScreen";
 import { useState } from "react";
 import Taskbar from "@/components/Taskbar";
 import Graph from "@/components/Graph";
+import ProjectsRow from "@/components/ProjectsRow";
+import { projects } from "@/helpers/constants";
+import { Section } from "lucide-react";
+import SectionHeading from "@/components/ButttonRow";
 
 const page = () => {
   const [loading, setLoading] = useState(true);
@@ -28,14 +32,12 @@ const page = () => {
             <div className="text-white">
               <Navbar />
               <HeroSection />
-              <Heading heading="Stack" />
+              <SectionHeading title="Skills" />
               <SkillsSection />
+              <SectionHeading title="Projects" />
+                <ProjectsSection />
               <Separator />
-              <Heading heading="Projects" showButton buttonLink="/projects" />
-
-              <ProjectsSection />
-              <Separator />
-              <Heading heading="Experience" />
+              <SectionHeading title="Experience" />
               <ExperienceSection
                 logo="/conduit.png"
                 title="Conduit Commerce"
@@ -61,10 +63,10 @@ const page = () => {
                 skills={["HTML", "Tailwind CSS", "SEO"]}
               />
               <Separator />
-               <Heading heading="Github Graph" />
+               <SectionHeading title="Github Graph" />
                <Graph/> 
               <Separator />
-              <Heading heading="About Me" />
+              <SectionHeading title="About Me" />
               <About />
               <Separator />
               <ContactSection />

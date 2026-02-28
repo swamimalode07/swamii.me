@@ -1,34 +1,16 @@
-import React from "react";
-import Image from "next/image";
-import ProjectsCard from "./ProjectsCard";
+import React from 'react'
+import ProjectsRow from './ProjectsRow'
+import { projects } from '@/helpers/constants'
+import ButttonRow from './ButttonRow'
 
 const ProjectsSection = () => {
   return (
-    <>
-      <div className="flex items-center justify-between border-b-2 border-[#1C1C1F] bg-black ">
-    
-      </div>
+    <div>
+      {projects.slice(0,4).map((project) => (
+          <ProjectsRow key={project.id} title={project.name} link={project.link} description={project.description} />
+      ))}
+    </div>
+  )
+}
 
-      <ProjectsCard
-        title="Layers  Landing Page"
-        description="Animated landing page."
-        image="/layers.png"
-          url="https://landing.swamii.me/"
-      />
-      <ProjectsCard
-        title="GhostType"
-        description="Minimalist Typing website."
-        image="/ghosttype.png"
-        url="https://ghosttype.swamii.me/"
-      />
-      <ProjectsCard
-        title="Anieditor"
-        description="Anime Overlay Editor."
-        image="/anieditor.png"
-        url="https://anieditor.swamii.me/"
-      />
-    </>
-  );
-};
-
-export default ProjectsSection;
+export default ProjectsSection
