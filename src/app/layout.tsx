@@ -4,6 +4,7 @@ import { GeistPixelSquare } from "geist/font/pixel";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { Space_Grotesk } from "next/font/google";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -86,7 +87,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <link rel="icon" href="/logo.ico" />
 
       <body className={` ${geistSans.variable} ${geistMono.variable} ${GeistPixelSquare.variable} ${spaceGrotesk.variable} antialiased`}>
-        {children}
+        <TooltipProvider>
+             {children}
+        </TooltipProvider>
         <Analytics />
         {/* <CustomCursor /> */}
       </body>

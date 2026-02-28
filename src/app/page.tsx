@@ -17,7 +17,7 @@ import Graph from "@/components/Graph";
 import ProjectsRow from "@/components/ProjectsRow";
 import { projects } from "@/helpers/constants";
 import { Section } from "lucide-react";
-import SectionHeading from "@/components/ButttonRow";
+import SectionHeading from "@/components/SectionHeading";
 
 const page = () => {
   const [loading, setLoading] = useState(true);
@@ -36,7 +36,6 @@ const page = () => {
               <SkillsSection />
               <SectionHeading title="Projects" />
                 <ProjectsSection />
-              <Separator />
               <SectionHeading title="Experience" />
               <ExperienceSection
                 logo="/conduit.png"

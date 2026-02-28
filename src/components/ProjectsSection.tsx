@@ -1,7 +1,7 @@
 import React from 'react'
 import ProjectsRow from './ProjectsRow'
 import { projects } from '@/helpers/constants'
-import ButttonRow from './ButttonRow'
+import ButttonRow from './SectionHeading'
 
 const ProjectsSection = () => {
   return (
