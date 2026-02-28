@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <div className="border-b-2 border-[#1C1C1F] bg-black px-[2%]">
+      <div className="border-b border-[#424244] px-[2%] py-1 fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-2xl">
         <div className="flex items-center justify-between px-4 py-3 sm:px-6">
           <p className="font-space-grotesk text-sm font-semibold text-white sm:text-xl">
             @code by SWAMI
