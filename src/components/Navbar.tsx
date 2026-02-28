@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <div className="border-b-2 border-[#1C1C1F] bg-black">
+      <div className="border-b-2 border-[#1C1C1F] bg-black px-[2%]">
         <div className="flex items-center justify-between px-4 py-4 sm:px-6">
           <p className="font-space-grotesk-700 font-sans text-lg font-semibold text-white sm:text-xl">
             @code by SWAMI

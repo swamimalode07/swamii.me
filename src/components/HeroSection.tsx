@@ -5,13 +5,13 @@ import Image from "next/image";
 const HeroSection = () => {
   return (
     <div>
-      <div className="border-b-2 border-[#1C1C1F] bg-black">
+      <div className="border-b-2 border-[#1C1C1F] bg-black px-[2%]">
         <div className="px-4 pt-4 sm:px-6 sm:pt-6 md:ml-4 md:px-0 md:pt-4">
           <div className="mb-20 flex max-w-7xl flex-col items-start justify-center pt-10 text-white sm:mt-18 md:pt-0 lg:mt-6">
-            <p className="font-space-grotesk text-4xl leading-tight font-bold sm:text-6xl md:text-7xl lg:text-8xl xl:text-[130px]">
+            <p className="font-space-grotesk text-4xl leading-tight font-semibold  sm:text-6xl md:text-7xl lg:text-8xl xl:text-[130px]">
               Hi I&apos;m Swami
             </p>
-            <p className="font-space-grotesk text-4xl leading-tight font-bold sm:-mt-4 sm:text-6xl md:-mt-6 md:text-7xl lg:-mt-2 lg:text-8xl xl:-mt-10 xl:text-[130px]">
+            <p className="font-space-grotesk text-4xl leading-tight font-semibold sm:-mt-4 sm:text-6xl md:-mt-6 md:text-7xl lg:-mt-2 lg:text-8xl xl:-mt-10 xl:text-[130px]">
               I build for the web.
             </p>
 
