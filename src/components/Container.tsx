@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react'
+import RulerLines from './RulerLines';
 
 interface ContainerProps{
     children:ReactNode;
@@ -7,8 +8,10 @@ interface ContainerProps{
 
 const Container:React.FC<ContainerProps> = ({children,className}) => {
   return (
-    <div className=' max-w-360 mx-auto border-l border-r border-[#27272a]'>
-      {children}
+    <div className={`max-w-400 bg-black mx-auto  flex flex-row ${className}`}>
+      <RulerLines variant='left'/>
+        {children}
+      <RulerLines variant='right'/>
     </div>
   )
 }

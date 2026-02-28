@@ -22,8 +22,9 @@ const page = () => {
       {loading ? (
         <LoadingScreen onFinish={() => setLoading(false)} />
       ) : (
-        <div className="w-full bg-[repeating-linear-gradient(45deg,#000_0px,#000_7px,#1C1C1F_7px,#1C1C1F_8px)]">
-          <Container>
+        <Container>
+          
+        <div className="w-full">
             <div className="text-white">
               <Navbar />
               <HeroSection />
@@ -68,8 +69,8 @@ const page = () => {
               <Separator />
               <ContactSection />
             </div>
-          </Container>
         </div>
+        </Container>
       )}
      {loading ||   <Taskbar />}
       
