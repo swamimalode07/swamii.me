@@ -30,7 +30,8 @@
     "react-github-calendar": "^4.5.11",
     "react-icons": "^5.5.0",
     "react-tooltip": "^5.30.0",
-    "tailwind-merge": "^3.5.0"
+    "tailwind-merge": "^3.5.0",
+    "tech-stack-icons": "^3.7.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

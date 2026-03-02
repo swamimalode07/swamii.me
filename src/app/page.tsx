@@ -16,6 +16,7 @@ import Graph from "@/components/Graph";
 import ProjectsRow from "@/components/ProjectsRow";
 import { projects } from "@/helpers/constants";
 import SectionHeading from "@/components/SectionHeading";
+import SkillSection from "@/components/SkillsSection/SkillsSection";
 
 const page = () => {
   const [loading, setLoading] = useState(true);
@@ -29,6 +30,8 @@ const page = () => {
           <div className="text-white">
             <Navbar />
             <HeroSection />
+            <SectionHeading title="Skills" />
+            <SkillSection/>
             <SectionHeading title="Projects" />
             <ProjectsSection />
             <SectionHeading title="Experience" />
@@ -56,8 +59,6 @@ const page = () => {
               ]}
               skills={["HTML", "Tailwind CSS", "SEO"]}
             />
-            <SectionHeading title="Skills" />
-            <SkillsSection />
             <SectionHeading title="Github Graph" />
             <Graph />
             <SectionHeading title="About Me" />
