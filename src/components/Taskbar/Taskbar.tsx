@@ -5,7 +5,7 @@ import { taskbarData } from "./constants";
 const Taskbar = () => {
   const [hovered, setHovered] = useState(false);
   return (
-    <div className="fixed bottom-8 left-1/2 z-50 flex -translate-x-1/2 transform items-center gap-4 rounded-full border border-white/20 bg-white/10 p-3 shadow-lg backdrop-blur-sm">
+    <div className="fixed bottom-8 left-1/2 z-50 flex -translate-x-1/2 transform items-center gap-4 rounded-full border border-white/20 bg-transparent p-3 shadow-lg backdrop-blur-sm">
       {taskbarData.map((item) => (
         <a
           key={item.name}
