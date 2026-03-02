@@ -11,7 +11,7 @@ import Separator from "@/components/Separator";
 import SkillsSection from "@/components/SkillsSection";
 import React, { useState } from "react";
 import LoadingScreen from "@/components/LoadingScreen";
-import Taskbar from "@/components/Taskbar";
+import Taskbar from "@/components/Taskbar/Taskbar";
 import Graph from "@/components/Graph";
 import ProjectsRow from "@/components/ProjectsRow";
 import { projects } from "@/helpers/constants";
