@@ -9,12 +9,12 @@ type SkillPillProps = {
 const SkillPill = ({ skillName, icon }: SkillPillProps) => {
   return (
     <motion.div
-      className="bg-grey px-4 py-2 rounded-lg text-sm flex items-center gap-2 w-fit cursor-pointer overflow-hidden"
+      className="bg-grey px-2 md:px-4 py-1 md:py-2 rounded-lg text-sm flex items-center gap-2 w-fit cursor-pointer overflow-hidden"
       initial="rest"
       whileHover="hover"
       animate="rest"
     >
-      <div className="w-6 h-6 relative flex-shrink-0 overflow-hidden">
+      <div className="w-4 h-4 md:w-6 md:h-6 relative flex-shrink-0 overflow-hidden">
         <motion.span
           className="absolute inset-0 flex items-center justify-center"
           variants={{
