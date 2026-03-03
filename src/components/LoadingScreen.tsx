@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 
 const words = [
   "Hello",
@@ -16,6 +16,14 @@ const words = [
 const WordPreloader = ({ onFinish }: { onFinish: () => void }) => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [closing, setClosing] = useState(false);
+  const finishedRef = useRef(false);
+
+  const finish = useCallback(() => {
+    if (!finishedRef.current) {
+      finishedRef.current = true;
+      onFinish();
+    }
+  }, [onFinish]);
 
   useEffect(() => {
     if (currentWordIndex < words.length - 1) {
@@ -24,14 +32,18 @@ const WordPreloader = ({ onFinish }: { onFinish: () => void }) => {
       }, 180);
       return () => clearTimeout(timer);
     } else {
-      // Trigger the shutter-up animation
-      setTimeout(() => setClosing(true), 200);
+      const closingTimer = setTimeout(() => setClosing(true), 200);
+      const fallbackTimer = setTimeout(() => finish(), 200 + 1200);
+      return () => {
+        clearTimeout(closingTimer);
+        clearTimeout(fallbackTimer);
+      };
     }
-  }, [currentWordIndex, onFinish]);
+  }, [currentWordIndex, finish]);
 
   const handleAnimationEnd = () => {
     if (closing) {
-      onFinish();
+      finish();
     }
   };
 
