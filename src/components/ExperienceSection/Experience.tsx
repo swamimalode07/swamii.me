@@ -19,7 +19,7 @@ const ExperienceSection = () => {
             <Experience
                 logo="/mach5.png"
                 company="Mach5 Software"
-                role="Freelance Developer"
+                role="Freelance"
                 duration="Mar 2025 - May 2025"
                 points={[
                     "Worked as a Frontend Developer, transforming Figma design into fully responsive, high-performance website",

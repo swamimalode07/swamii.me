@@ -59,7 +59,7 @@ const RulerLines = ({ variant = 'left' }: RulerLinesProps) => {
       ref={ref}
       className="hidden md:block"
       style={{
-        position: 'relative',
+        position: 'absolute',
         top: 0,
         [variant]: 0,
         height: '100%',
