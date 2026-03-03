@@ -147,7 +147,7 @@ const Navbar: React.FC = () => {
                 Projects
               </button>
 
-              <button
+              {/* <button
                 className="block w-full rounded-lg px-3 py-3 text-left font-sans font-medium text-white transition-colors hover:bg-[#1C1C1F] hover:text-gray-300"
                 onClick={() => {
                   setIsMenuOpen(false);
@@ -155,7 +155,7 @@ const Navbar: React.FC = () => {
                 }}
               >
                 Search
-              </button>
+              </button> */}
 
               <button
                 className="block w-full rounded-lg px-3 py-3 text-left font-sans font-medium text-white transition-colors hover:bg-[#1C1C1F] hover:text-gray-300"
@@ -168,10 +168,10 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      <CommandMenu
+      {/* <CommandMenu
         isOpen={isCommandMenuOpen}
         onClose={() => setIsCommandMenuOpen(false)}
-      />
+      /> */}
     </div>
   );
 };

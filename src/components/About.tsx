@@ -14,7 +14,7 @@ const About = () => {
         <p className="mb-4 sm:mb-1 leading-relaxed text-base sm:text-lg md:text-xl text-[#A6A6A6]">
           Right now, I’m building 
           <a href="https://www.vidstudio.live/" target="_blank" rel="noopener noreferrer" className="mx-1">
-            <span className="bg-black border border-neutral-700 px-2 py-0.3 rounded-xl hover:text-white text-lg font-sans shadow-[inset_0_0_12px_rgba(115,115,115,0.6)] hover:shadow-[inset_0_0_12px_rgba(139,92,246,0.6)] transform transition-all duration-200 font-semibold hover:border-purple-800">VidStudio</span>
+            <span className="bg-black border border-neutral-700 px-2 py-0.3 rounded-xl hover:text-white md:text-lg font-sans shadow-[inset_0_0_12px_rgba(115,115,115,0.6)] hover:shadow-[inset_0_0_12px_rgba(139,92,246,0.6)] transform transition-all duration-200 font-semibold hover:border-purple-800">VidStudio</span>
           </a>
            - a video recording tool that help anyone record high-quality, beautiful product videos with ease & it's free. 
         </p>
@@ -25,6 +25,7 @@ const About = () => {
         
 
         <div className="flex flex-wrap justify-center sm:justify-start gap-6 py-2 sm:py-4">
+          
           <a
             href="https://github.com/swamimalode07"
             target="_blank"
@@ -41,14 +42,14 @@ const About = () => {
           >
             LinkedIn <ArrowUpRight size={16} />
           </a>
-          <a
+          {/* <a
             href="https://leetcode.com/u/shrek07/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 text-white hover:underline text-sm sm:text-base"
           >
             Leetcode <ArrowUpRight size={16} />
-          </a>
+          </a> */}
         </div>
       </div>
     </section>
