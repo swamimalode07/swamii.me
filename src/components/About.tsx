@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 const About = () => {
   return (
     <section className="bg-black text-gray-300">
-      <div className="px-4 sm:px-[5%] mt-0 py-6">
+      <div className="px-[4%] py-10 md:py-15">
         <p className="mb-4 sm:mb-4 leading-relaxed text-base sm:text-lg md:text-xl text-[#A6A6A6]">
           Heyy!! I’m a <span className="text-neutral-300">Design Engineer</span> and a <span className="text-neutral-300">Full Stack Developer</span>.
         </p>

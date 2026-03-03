@@ -4,7 +4,7 @@ import { skills } from "./constants";
 
 const SkillSection = () => {
   return (
-    <div className="px-[4%] py-10 md:py-4">
+    <div className="px-[4%] py-10 md:py-15">
       <div className="flex flex-wrap gap-3">
         {skills.map((skill) => (
           <SkillPill

@@ -3,7 +3,7 @@ import Experience from './ExperianceComponent'
 
 const ExperienceSection = () => {
     return (
-        <div className='flex flex-col '>
+        <div className='flex flex-col my-8 md:my-10  '>
             <Experience
                 logo="/conduitLogo.png"
                 company="Conduit Commerce"
