@@ -38,7 +38,7 @@ const page = () => {
             </svg>
           </div>
 
-          <span className=" text-xs text-neutral-300 hover:text-white transition-colors duration-150">Enable animation</span>
+          <span className=" text-xs text-neutral-300 hover:text-white transition-colors duration-150">Toggle animation</span>
         </label>
       </div>
     </div>
