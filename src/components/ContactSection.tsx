@@ -22,7 +22,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="bg-black text-center py-34 px-[5%] font-space-grotesk">
+    <section className="bg-black text-center py-34 px-[5%] font-space-grotesk pb-50">
       <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 md:mb-4">
         Let's work together
       </h2>

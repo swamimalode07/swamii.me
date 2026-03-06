@@ -27,7 +27,7 @@ const page = () => {
       {loading && <LoadingScreen onFinish={() => setLoading(false)} />}
 
       <Container>
-        <div className="w-full">
+        <div className="w-full md:px-8">
           <div className="text-white">
             <Navbar />
             <HeroSection />

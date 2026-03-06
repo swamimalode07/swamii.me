@@ -43,10 +43,10 @@ const Experience = ({
   const [height, setHeight] = useState(0);
 
   useEffect(() => {
-    if (contentRef.current) {
-      setHeight(contentRef.current.scrollHeight);
-    }
-  }, [open, skills]);
+  if (contentRef.current) {
+    setHeight(contentRef.current.scrollHeight);
+  }
+}, [points, skills]);
 
   return (
     <div className="px-4 md:px-[4%]">

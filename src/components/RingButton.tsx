@@ -1,22 +1,55 @@
 import React from "react"
 import Link from "next/link"
 import { Button } from "./ui/button"
-import { LucideIcon } from "lucide-react"
+import { cn } from "@/lib/utils"
+
+type RingButtonSize = "sm" | "md" | "lg"
 
 type RingButtonProps = {
   text: string
   href?: string
-  icon?: LucideIcon
+  icon?: React.ElementType
+  size?: RingButtonSize
+  className?: string
 }
 
-const RingButton = ({ text, href, icon: Icon }: RingButtonProps) => {
+const ringButtonSizeStyles: Record<
+  RingButtonSize,
+  {
+    buttonSize: "sm" | "default" | "lg"
+    buttonPadding: string
+    textSize: string
+    iconSize: string
+  }
+> = {
+  sm: {
+    buttonSize: "sm",
+    buttonPadding: "px-3 py-1.5 md:py-2",
+    textSize: "text-xs md:text-sm",
+    iconSize: "h-3.5 w-3.5 sm:h-4 sm:w-4",
+  },
+  md: {
+    buttonSize: "default",
+    buttonPadding: "px-4 py-2 md:py-3",
+    textSize: "text-xs md:text-base",
+    iconSize: "h-4 w-4 sm:h-5 sm:w-5",
+  },
+  lg: {
+    buttonSize: "lg",
+    buttonPadding: "px-6 py-2 md:py-4",
+    textSize: "text-xs md:text-lg",
+    iconSize: "h-4 w-4 sm:h-5 sm:w-5",
+  },
+}
+
+const RingButton = ({ text, href, icon: Icon, size = "lg" ,className }: RingButtonProps) => {
+  const sizeStyles = ringButtonSizeStyles[size]
+
   const content = (
     <>
-      {Icon && (
-        <Icon className="h-4 w-4 sm:h-5 sm:w-5" />
-      )}
+      {Icon && <Icon className={sizeStyles.iconSize} />}
 
-      <span className="text-xs md:text-lg hover:text-white/70">
+      <span className={cn(sizeStyles.textSize, "hover:text-white/70")}>
         {text}
       </span>
 
@@ -28,20 +61,24 @@ const RingButton = ({ text, href, icon: Icon }: RingButtonProps) => {
     return (
       <Button
         asChild
-        size="lg"
-        className="relative flex items-center gap-2 bg-grey border border-[#39393D] px-6 py-2 md:py-4 rounded-md transition-colors"
+        size={sizeStyles.buttonSize}
+        className={cn(
+          "relative flex items-center gap-2 rounded-md border border-[#39393D] transition-colors",
+          sizeStyles.buttonPadding
+        )}
       >
-        <Link href={href}>
-          {content}s
-        </Link>
+        <Link href={href}>{content}</Link>
       </Button>
     )
   }
 
   return (
     <Button
-      size="lg"
-      className="relative flex items-center gap-2 border border-[#39393D] px-6 py-4 rounded-md transition-colors"
+      size={sizeStyles.buttonSize}
+      className={cn(
+        "relative flex items-center gap-2 rounded-md border border-[#39393D] transition-colors",
+        sizeStyles.buttonPadding
+      )}
     >
       {content}
     </Button>
