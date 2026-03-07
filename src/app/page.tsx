@@ -9,6 +9,7 @@ import Graph from "@/components/Graph";
 import SectionHeading from "@/components/SectionHeading";
 import SkillSection from "@/components/SkillsSection/SkillsSection";
 import ExperienceSection from "@/components/ExperienceSection/Experience";
+import { Button } from "@/components/ui/button";
 
 const page = () => {
   return (

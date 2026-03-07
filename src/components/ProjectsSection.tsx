@@ -4,6 +4,8 @@ import { projects } from '@/helpers/constants'
 import ButttonRow from './SectionHeading'
 import ProjectCard from './ProjectCard.tsx/ProjectCard'
 import ProjectsCard from './ProjectsCard'
+import { Button } from './ui/button'
+import RingButton from './RingButton'
 
 const ProjectsSection = () => {
   return (
@@ -19,6 +21,9 @@ const ProjectsSection = () => {
             githubLink={project.github}
           />
         ))}
+      </div>
+      <div className="px-[4%] flex justify-center pb-6">
+        <RingButton text="View All Projects" size="lg"/>
       </div>
     </div>
   )

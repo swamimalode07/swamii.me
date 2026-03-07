@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
             <div className="hidden items-center gap-6 md:flex lg:gap-6">
               <button
                 className="font-sans font-medium text-white/60 hover:text-white transition-colors"
-                onClick={() => router.push("/projects")}
+                onClick={() => router.push("/projectspage")}
               >
                 Projects
               </button>
