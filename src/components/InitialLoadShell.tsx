@@ -10,7 +10,7 @@ type LoadingSCreenProps = {
 
 let hasShownInitialLoader = false;
 
-const LoadingSCreen = ({ children }: LoadingSCreenProps) => {
+const LoadingScreen = ({ children }: LoadingSCreenProps) => {
   const [loading, setLoading] = useState(!hasShownInitialLoader);
 
   const handleLoadingFinish = () => {
@@ -27,4 +27,4 @@ const LoadingSCreen = ({ children }: LoadingSCreenProps) => {
   );
 };
 
-export default LoadingSCreen;
+export default LoadingScreen;
