@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useEffect, useRef, useState } from 'react'
 
 interface RulerLinesProps {
@@ -30,7 +32,7 @@ const RulerLines = ({ variant = 'left' }: RulerLinesProps) => {
     for (let y = 0; y <= height; y += minorInterval) {
       const isMajor = y % majorInterval === 0
       const isMid = y % 50 === 0 && !isMajor
-      const tickWidth = isMajor ? 16 : isMid ? 8 : 8
+      const tickWidth = isMajor ? 18 : isMid ? 10 : 6
 
       // Left ruler: baseline on RIGHT edge, ticks grow leftward (outward)
       // Right ruler: baseline on LEFT edge, ticks grow rightward (outward)
