@@ -26,7 +26,7 @@ const ContactSection = () => {
       <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 md:mb-4">
         Let's work together
       </h2>
-      <p className="text-gray-300 mb-10 text-lg">
+      <p className="text-gray-300 mb-10 text-lg   ">
         Have a project in mind? Let's create something amazing.
       </p>
       <div className="flex items-center justify-center gap-4">
