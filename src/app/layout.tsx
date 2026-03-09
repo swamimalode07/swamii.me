@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { GeistPixelSquare } from "geist/font/pixel";
 import "./globals.css";
-import { Space_Grotesk } from "next/font/google";
-import CustomCursor from "@/components/CustomCursor";
 import { Analytics } from "@vercel/analytics/next";
-import { Databuddy } from '@databuddy/sdk/react';
+import { Space_Grotesk } from "next/font/google";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,10 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-space-grotesk",
-  display: "swap",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -87,19 +86,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
       <link rel="icon" href="/logo.ico" />
 
-      <body className={` ${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} antialiased`}>
-        {children}
+      <body className={` ${geistSans.variable} ${geistMono.variable} ${GeistPixelSquare.variable} ${spaceGrotesk.variable} antialiased`}>
+        <TooltipProvider>
+             {children}
+        </TooltipProvider>
         <Analytics />
-        <Databuddy
-        clientId={process.env.NEXT_PUBLIC_DATABUDDY_CLIENT_ID || ""}
-        trackHashChanges={true}
-        trackAttributes={true}
-        trackOutgoingLinks={true}
-        trackInteractions={true}
-        trackScrollDepth={true}
-        trackWebVitals={true}
-        trackErrors={true}
-      />
         {/* <CustomCursor /> */}
       </body>
     </html>

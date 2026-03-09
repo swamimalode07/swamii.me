@@ -16,7 +16,7 @@ const Page = () => {
 
               <div className="flex w-full items-center justify-between mb-8">
                 <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-[#494949] bg-[#1C1C1C]">
-                  <span className="text-sm text-[#A4A4A4] font-space-grotesk-400">
+                  <span className="text-sm text-[#A4A4A4]">
                     🔥 Coming soon
                   </span>
                 </div>
@@ -30,10 +30,10 @@ const Page = () => {
                 </button>
               </div>
 
-              <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px] font-bold leading-tight font-space-grotesk-700">
+              <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px] font-bold leading-tight ">
                 Components
               </h1>
-              <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px] font-bold leading-tight sm:-mt-4 md:-mt-6 lg:-mt-2 xl:-mt-8 font-space-grotesk-700">
+              <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[120px] font-bold leading-tight sm:-mt-4 md:-mt-6 lg:-mt-2 xl:-mt-8 ">
                 Library
               </h1>
             </div>
@@ -44,7 +44,7 @@ const Page = () => {
 
         <div className="bg-black px-4 sm:px-6 md:pl-4 md:px-0 py-6">
           <div className="max-w-7xl">
-            <p className="text-[#494949] text-sm font-space-grotesk-400">
+            <p className="text-[#494949] text-sm">
               Built with React, TypeScript & Tailwind CSS
             </p>
           </div>

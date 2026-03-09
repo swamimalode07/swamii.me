@@ -143,7 +143,7 @@ const CommandMenu: React.FC<CommandMenuProps> = ({ isOpen, onClose }) => {
 
       <div className="fixed top-0 right-0 left-0 z-50 flex justify-center pt-[8vh]">
         <div className="mx-4 w-full max-w-2xl overflow-hidden rounded-xl border-2 border-[#1C1C1F] bg-black shadow-2xl">
-          <div className="hide-scrollbar flex items-center gap-4 border-b-2 border-[#1C1C1F] p-5">
+          <div className="flex items-center gap-4 border-b-2 border-[#1C1C1F] p-5">
             <Search className="h-5 w-5 flex-shrink-0 text-gray-400" />
             <input
               ref={inputRef}
@@ -165,7 +165,7 @@ const CommandMenu: React.FC<CommandMenuProps> = ({ isOpen, onClose }) => {
               </button>
             </div>
           </div>
-          <div className="hide-scrollbar max-h-96 overflow-y-auto">
+          <div className=" max-h-96 overflow-y-auto">
             {filteredSections.length === 0 ? (
               <div className="p-12 text-center text-gray-400">
                 <div className="mb-3">
