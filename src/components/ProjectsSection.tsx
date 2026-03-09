@@ -21,6 +21,7 @@ const ProjectsSection = () => {
             liveLink={project.link}
             githubLink={project.github}
             status={project.status}
+            projectBg={project.projectBg || ""}
           />
         ))}
       </div>

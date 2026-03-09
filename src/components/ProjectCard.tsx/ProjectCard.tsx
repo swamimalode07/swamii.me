@@ -1,9 +1,12 @@
+"use client";
+
 import Image from "next/image"
 import React from "react"
 import StatusDot from "../BlinkingDot.tsx/BlinkingDot"
 import RingButton from "../RingButton"
 import { GitHubIcon } from "@/app/icons/Githubicon"
 import { CircleArrowRight } from "lucide-react"
+import { motion } from "motion/react"
 
 type ProjectStatus = "live" | "building" | "discontinued"
 
@@ -14,6 +17,7 @@ type ProjectCardProps = {
   status?: ProjectStatus
   liveLink?: string
   githubLink?: string
+  projectBg?: string
 }
 
 const statusColorMap: Record<ProjectStatus, "green" | "yellow" | "red"> = {
@@ -29,21 +33,39 @@ const ProjectCard = ({
   status = "live",
   liveLink,
   githubLink,
+  projectBg,
 }: ProjectCardProps) => {
 
   const color = statusColorMap[status]
 
+
   return (
-    <div className="h-full bg-black border border-neutral-800 ring-1 rounded-lg ring-neutral-900 hover:ring-neutral-800 transition duration-300 ring-offset-4 ring-offset-black flex flex-col">
-      
-      <div className="p-2 rounded-xl">
+    <div className="h-full group bg-black border border-neutral-800 ring-1 rounded-lg ring-neutral-900 hover:ring-neutral-800 transition duration-300 ring-offset-4 ring-offset-black flex flex-col">
+
+      <div className="relative w-full md:h-52 rounded-lg overflow-hidden bg-neutral-900">
+
         <Image
-          src={image}
-          alt={title}
-          width={600}
-          height={400}
-          className="w-full md:h-52 object-cover rounded-sm"
-        />
+  src={projectBg || image}
+  alt="background"
+  fill
+  className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-600"
+/>
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 10 }}
+          whileHover={{ opacity: 1, y: -2 }}
+          transition={{ duration: 0.2 }}
+          className="flex justify-center items-center"
+        >
+          <Image
+            src={image}
+            alt={title}
+            width={340}
+            height={120}
+            className="relative z-10 object-contain mt-6 rounded-t-lg"
+          />
+        </motion.div>
+
       </div>
 
       <div className="p-2 flex flex-1 flex-col">
@@ -53,7 +75,7 @@ const ProjectCard = ({
           </h3>
 
           <div className="flex gap-2 items-center">
-            <StatusDot color={color}/>
+            <StatusDot color={color} />
             {status}
           </div>
         </div>
