@@ -4,13 +4,13 @@ import React, { useState } from "react";
 import LoadingScreen from "@/components/LoadingScreen";
 import Taskbar from "@/components/Taskbar/Taskbar";
 
-type LoadingSCreenProps = {
+type InitialLoadShellProps = {
   children: React.ReactNode;
 };
 
 let hasShownInitialLoader = false;
 
-const LoadingScreen = ({ children }: LoadingSCreenProps) => {
+const InitialLoadShell = ({ children }: InitialLoadShellProps) => {
   const [loading, setLoading] = useState(!hasShownInitialLoader);
 
   const handleLoadingFinish = () => {
@@ -27,4 +27,4 @@ const LoadingScreen = ({ children }: LoadingSCreenProps) => {
   );
 };
 
-export default LoadingScreen;
+export default InitialLoadShell;

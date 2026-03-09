@@ -37,6 +37,7 @@ const page = () => {
                                     description={project.description}
                                     liveLink={project.link}
                                     githubLink={project.github}
+                                    status={project.status}
                                 />
                             ))}
                         </div>

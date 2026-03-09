@@ -5,19 +5,21 @@ import RingButton from "../RingButton"
 import { GitHubIcon } from "@/app/icons/Githubicon"
 import { CircleArrowRight } from "lucide-react"
 
+type ProjectStatus = "live" | "building" | "discontinued"
+
 type ProjectCardProps = {
   image: string
   title: string
   description: string
-  status?: "live" | "offline" | "beta"
+  status?: ProjectStatus
   liveLink?: string
   githubLink?: string
 }
 
-const statusColorMap = {
+const statusColorMap: Record<ProjectStatus, "green" | "yellow" | "red"> = {
   live: "green",
-  offline: "red",
-  beta: "yellow",
+  building: "yellow",
+  discontinued: "red",
 }
 
 const ProjectCard = ({
@@ -28,6 +30,9 @@ const ProjectCard = ({
   liveLink,
   githubLink,
 }: ProjectCardProps) => {
+
+  const color = statusColorMap[status]
+
   return (
     <div className="h-full bg-black border border-neutral-800 ring-1 rounded-lg ring-neutral-900 hover:ring-neutral-800 transition duration-300 ring-offset-4 ring-offset-black flex flex-col">
       
@@ -48,12 +53,12 @@ const ProjectCard = ({
           </h3>
 
           <div className="flex gap-2 items-center">
-            <StatusDot color="green"/>
+            <StatusDot color={color}/>
             {status}
           </div>
         </div>
 
-        <p className= "text-[14px] md:text-base text-gray-400 mb-4 px-2 flex-1">
+        <p className="text-[14px] md:text-base text-gray-400 mb-4 px-2 flex-1">
           {description}
         </p>
 

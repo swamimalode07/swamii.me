@@ -15,9 +15,9 @@ const page = () => {
   return (
     <LoadingScreen>
       <Container>
-        <div className="hidden md:block">
+        {/* <div className="hidden md:block">
           <SectionIndicator />
-        </div>
+        </div> */}
         <div className="w-full md:px-8">
           <div className="text-white">
             <Navbar />

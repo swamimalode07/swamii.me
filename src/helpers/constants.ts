@@ -5,6 +5,7 @@ export type Project = {
   image: string;
   link: string;
   github?: string;
+  status?: "live" | "discontinued" | "building";
 };
 
 export const projects: Project[] = [
@@ -16,6 +17,7 @@ export const projects: Project[] = [
     image: "/ghosttype.png",
     link: "https://ghosttype.swamii.me",
     github: "https://github.com/swamimalode07/ghosttype",
+     status: "building"
   },
   {
     id: 2,

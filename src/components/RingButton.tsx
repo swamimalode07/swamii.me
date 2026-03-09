@@ -49,7 +49,7 @@ const RingButton = ({ text, href, icon: Icon, size = "lg" ,className }: RingButt
     <>
       {Icon && <Icon className={sizeStyles.iconSize} />}
 
-      <span className={cn(sizeStyles.textSize, "hover:text-white/70")}>
+      <span className={cn(sizeStyles.textSize,)}>
         {text}
       </span>
 
@@ -63,7 +63,7 @@ const RingButton = ({ text, href, icon: Icon, size = "lg" ,className }: RingButt
         asChild
         size={sizeStyles.buttonSize}
         className={cn(
-          "relative flex items-center gap-2 rounded-md border border-[#39393D] transition-colors",
+          "relative flex items-center gap-2 rounded-md border border-[#39393D] transition-colors  ",
           sizeStyles.buttonPadding
         )}
       >
@@ -76,7 +76,7 @@ const RingButton = ({ text, href, icon: Icon, size = "lg" ,className }: RingButt
     <Button
       size={sizeStyles.buttonSize}
       className={cn(
-        "relative flex items-center gap-2 rounded-md border border-[#39393D] transition-colors",
+        "relative flex items-center gap-2 rounded-md border border-[#39393D] transition-colors hover:bg-[#1C1C1F]/50 scale-100 hover:scale-[0.99]",
         sizeStyles.buttonPadding
       )}
     >

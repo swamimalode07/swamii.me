@@ -31,9 +31,9 @@ const HeroSection = () => {
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3 md:gap-6 sm:mt-6 md:mt-8">
-              <a href="https://swamii.me" target="_blank" rel="noopener noreferrer">
+              {/* <a href="/projectspage" target="_blank" rel="noopener noreferrer">
                 <RingButton text="View my Work" icon={FileDown} />
-              </a>
+              </a> */}
               <a href="https://cal.com/swamimalode" target="_blank" rel="noopener noreferrer">
                 <RingButton text="Book a Meeting" icon={Calendar} />
               </a>

@@ -142,7 +142,7 @@ const Navbar: React.FC = () => {
             <div className="space-y-1 pt-3">
               <button
                 className="block w-full rounded-lg px-3 py-3 text-left font-sans font-medium text-white transition-colors hover:bg-[#1C1C1F] hover:text-gray-300"
-                onClick={() => router.push("/projects")}
+                onClick={() => router.push("/projectspage")}
               >
                 Projects
               </button>
