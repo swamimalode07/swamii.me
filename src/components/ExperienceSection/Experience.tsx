@@ -5,7 +5,7 @@ const ExperienceSection = () => {
     return (
         <div className='flex flex-col py-10 '>
             <Experience
-                logo="/conduitLogo.png"
+                logo="experience/conduitLogo.png"
                 company="Conduit Commerce"
                 role="Intern"
                 duration="Aug 2025 - Present"
@@ -17,7 +17,7 @@ const ExperienceSection = () => {
                 skills={['Next.js', 'TypeScript', 'Tailwind CSS',"Redux","Python","FastAPI","Docker"]}
             />
             <Experience
-                logo="/mach5.png"
+                logo="experience/mach5.png"
                 company="Mach5 Software"
                 role="Freelance"
                 duration="Mar 2025 - May 2025"

@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: "Swami's Portfolio site",
     images: [
       {
-        url: "https://swamii.me/opengraphh.jpg",
+        url: "https://swamii.me/official/opengraphh.jpg",
         width: 1200,
         height: 630,
         alt: "My OG Image",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Swami's Portfolio",
     description: "This is my portfolio.",
-    images: ["https://swamii.me/opengraphh.jpg"],
+    images: ["https://swamii.me/official/opengraphh.jpg"],
     creator: "@SwamiMalode",
   },
 };

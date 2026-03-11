@@ -5,7 +5,7 @@
 ---
 
 ## Screenshot
-![Portfolio Screenshot](public/opengraphh.jpg)  
+![Portfolio Screenshot](public/official/opengraphh.jpg)  
 
 ---
 
