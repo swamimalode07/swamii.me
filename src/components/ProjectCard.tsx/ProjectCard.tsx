@@ -42,14 +42,14 @@ const ProjectCard = ({
   return (
     <div className="h-full group bg-black border border-neutral-800 ring-1 rounded-lg ring-neutral-900 hover:ring-neutral-800 transition duration-300 ring-offset-4 ring-offset-black flex flex-col">
 
-      <div className="relative w-full md:h-52 rounded-lg overflow-hidden bg-neutral-900">
+      <div className="relative w-full md:h-52 rounded-t-lg overflow-hidden bg-neutral-900">
 
         <Image
-  src={projectBg || image}
-  alt="background"
-  fill
-  className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-600"
-/>
+          src={projectBg || image}
+          alt="background"
+          fill
+          className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-600"
+        />
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 10 }}
@@ -62,7 +62,7 @@ const ProjectCard = ({
             alt={title}
             width={340}
             height={120}
-            className="relative z-10 object-contain mt-6 rounded-t-lg"
+            className="relative z-10 object-contain mt-6 rounded-t-lg border border-neutral-600"
           />
         </motion.div>
 
@@ -84,7 +84,7 @@ const ProjectCard = ({
           {description}
         </p>
 
-        <div className="grid grid-cols-2 gap-4 p-2 mt-auto">
+        <div className={`grid ${githubLink ? "grid-cols-2" : "grid-cols-1"} gap-4 p-2 mt-auto`}>
           {liveLink && (
             <RingButton
               text="View Live"
@@ -99,7 +99,7 @@ const ProjectCard = ({
               text="Github"
               icon={GitHubIcon}
               href={githubLink}
-              size="md"
+              size="sm"
             />
           )}
         </div>

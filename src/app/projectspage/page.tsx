@@ -16,7 +16,7 @@ const page = () => {
                     <div className="text-white px-[2%]">
                         <div className='text-lg gap-2 items-center font-semibold mt-8 mb-4 '>
                             <Link href="/" className='flex items-center gap-2'>
-                                <Button variant='primary' size="lg"><Undo2 /> Back </Button>
+                                <Button variant='primary' size="lg" ><Undo2 /> Back </Button>
                             </Link>
                         </div>
                         <div className='flex flex-col gap-4 mb-8'>
