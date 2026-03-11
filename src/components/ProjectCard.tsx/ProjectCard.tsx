@@ -1,12 +1,13 @@
 "use client";
 
 import Image from "next/image"
-import React from "react"
+import React, { useEffect } from "react"
 import StatusDot from "../BlinkingDot.tsx/BlinkingDot"
 import RingButton from "../RingButton"
 import { GitHubIcon } from "@/app/icons/Githubicon"
 import { CircleArrowRight } from "lucide-react"
 import { motion } from "motion/react"
+import { Button } from "../ui/button";
 
 type ProjectStatus = "live" | "building" | "discontinued"
 
@@ -37,12 +38,38 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
 
   const color = statusColorMap[status]
+  const [githubStar, setGithubStar] = React.useState<number>(0);
 
+   const fetchStars = async (repo: string): Promise<number> => {
+    try {
+      const res = await fetch(`https://api.github.com/repos/${repo}`);
+      if (!res.ok) return 0;
+      const data = await res.json();
+      return typeof data.stargazers_count === "number" ? data.stargazers_count : 0;
+    } catch (err) {
+      console.error("Error fetching stars:", err);
+      return 0;
+    }
+  };
+
+  useEffect(() => {
+    if (githubLink) {
+      fetchStars( githubLink.replace("https://github.com/", "") ).then(setGithubStar);
+    }
+  },[githubLink])
 
   return (
     <div className="h-full group bg-black border border-neutral-800 ring-1 rounded-lg ring-neutral-900 hover:ring-neutral-800 transition duration-300 ring-offset-4 ring-offset-black flex flex-col">
 
       <div className="relative w-full md:h-52 rounded-t-lg overflow-hidden bg-neutral-900">
+        {githubStar > 0 && (
+          <div className="absolute top-2 right-2 z-20">
+            <Button variant="primary" size="sm" className="flex items-center gap-1 bg-transparent hover:bg-transparent">
+              <GitHubIcon />
+              <span className="text-white">{githubStar}</span>
+            </Button>
+          </div>
+        )}
 
         <Image
           src={projectBg || image}

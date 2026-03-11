@@ -12,7 +12,7 @@ const page = () => {
     return (
         <div className='bg-black'>
             <Container>
-                <div className="w-full md:px-8">
+                <div className="w-full px-4 md:px-8">
                     <div className="text-white px-[2%]">
                         <div className='text-lg gap-2 items-center font-semibold mt-8 mb-4 '>
                             <Link href="/" className='flex items-center gap-2'>
