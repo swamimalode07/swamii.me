@@ -118,6 +118,8 @@ const ProjectCard = ({
               icon={CircleArrowRight}
               href={liveLink}
               size="md"
+              target="_blank"
+              rel="noopener noreferrer"
             />
           )}
 
@@ -127,6 +129,8 @@ const ProjectCard = ({
               icon={GitHubIcon}
               href={githubLink}
               size="sm"
+              target="_blank"
+              rel="noopener noreferrer"
             />
           )}
         </div>

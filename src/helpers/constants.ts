@@ -26,7 +26,7 @@ export const projects: Project[] = [
     image: "/Project/ProjectImages/ghosttype.png",
     link: "https://ghosttype.swamii.me",
     github: "https://github.com/swamimalode07/ghosttype",
-     status: "building",
+     status: "live",
      projectBg:"/Project/ProjectBackground/ghosttype.png"
   },
   {

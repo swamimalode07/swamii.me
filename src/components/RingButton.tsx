@@ -11,6 +11,8 @@ type RingButtonProps = {
   icon?: React.ElementType
   size?: RingButtonSize
   className?: string
+  target?: string
+  rel?: string
 }
 
 const ringButtonSizeStyles: Record<
@@ -42,7 +44,7 @@ const ringButtonSizeStyles: Record<
   },
 }
 
-const RingButton = ({ text, href, icon: Icon, size = "lg" ,className }: RingButtonProps) => {
+const RingButton = ({ text, href, icon: Icon, size = "lg" ,className, target, rel }: RingButtonProps) => {
   const sizeStyles = ringButtonSizeStyles[size]
 
   const content = (
@@ -67,7 +69,7 @@ const RingButton = ({ text, href, icon: Icon, size = "lg" ,className }: RingButt
           sizeStyles.buttonPadding
         )}
       >
-        <Link href={href}>{content}</Link>
+        <Link href={href} target={target} rel={rel}>{content}</Link>
       </Button>
     )
   }
