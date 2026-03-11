@@ -1,7 +1,10 @@
 "use client";
-import { ArrowLeft, ExternalLink, Twitter } from "lucide-react";
+import { ArrowLeft, ExternalLink, Twitter, Undo2 } from "lucide-react";
 import React, { useState, useRef, useEffect } from "react";
-import { useRouter } from "next/navigation"; 
+import { useRouter } from "next/navigation";
+import Container from "@/components/Container";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface VideoFrameProps {
   videoUrl: string;
@@ -57,9 +60,8 @@ const VideoFrame: React.FC<VideoFrameProps> = ({
 
         {/* Subtle Grid Pattern Overlay */}
         <div
-          className={`absolute inset-0 transition-opacity duration-500 ${
-            isHovered ? "opacity-10" : "opacity-0"
-          }`}
+          className={`absolute inset-0 transition-opacity duration-500 ${isHovered ? "opacity-10" : "opacity-0"
+            }`}
           style={{
             backgroundImage:
               "linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)",
@@ -132,43 +134,45 @@ const ArtGallery = () => {
       twitterUrl: "https://swamii.me",
     }
   ];
-    const router= useRouter()
+  const router = useRouter()
 
   return (
-    <div className="mx-auto min-h-screen bg-black bg-[repeating-linear-gradient(45deg,#000_0px,#000_7px,#1C1C1F_7px,#1C1C1F_8px)]">
-      <div className="mx-auto min-h-screen w-[90%] border-r-2 border-l-2 border-[#1C1C1F] bg-black text-white">
-        <div className="border-b border-[#1C1C1F]">
-          <div className="mx-auto max-w-5xl px-6 py-10">
-            <div className="mb-6 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-              <h1 className="text-2xl font-bold sm:text-6xl md:text-7xl lg:text-5xl">
-                Art Gallery
-              </h1>
-              <button
-                onClick={() => router.push('/')}
-                className="inline-flex items-center gap-2 rounded-lg border-2 border-[#494949] px-3 py-2 text-sm text-white transition-colors hover:border-gray-800"
-              >
-                <ArrowLeft size={18} /> Back
-              </button>
+    <div>
+      <div className='bg-black '>
+        <Container>
+          <div className="w-full md:px-8 bg-black min-h-screen">
+            <div className="text-white px-[2%]">
+              <div className='text-lg gap-2 items-center font-semibold mt-8 mb-4 '>
+                <Link href="/" className='flex items-center gap-2'>
+                  <Button variant='primary' size="lg" ><Undo2 /> Back </Button>
+                </Link>
+              </div>
+              <div className='flex flex-col gap-4 mb-8'>
+                <div className='text-6xl pt-10 font-semibold font-space-grotesk'>
+                  Art Gallery
+                </div>
+                <div className='text-xl text-neutral-500'>
+                  Animated components that i made from Design to Code :)
+                </div>
+              </div>
+              <div>
+                <hr className='border-0.5 border-[#424244]' />
+              </div>
+              <div className="grid grid-cols-2">
+                 {projects.map((project) => (
+                  <div key={project.id} className="py-8 ">
+                    <VideoFrame
+                      videoUrl={project.videoUrl}
+                      liveUrl={project.liveUrl}
+                      twitterUrl={project.twitterUrl}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
-            <p className="max-w-2xl text-base text-[#666] sm:text-xl">
-              Animated components that i made from Design to Code :)
-            </p>
           </div>
 
-          {/* Video Gallery */}
-          <div className="mx-auto max-w-5xl px-6 py-6 pb-24 sm:max-w-[60%]">
-            <div className="space-y-6">
-              {projects.map((project) => (
-                <VideoFrame
-                  key={project.id}
-                  videoUrl={project.videoUrl}
-                  liveUrl={project.liveUrl}
-                  twitterUrl={project.twitterUrl}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
+        </Container>
       </div>
     </div>
   );
