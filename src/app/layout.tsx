@@ -26,6 +26,9 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Swami Malode",
   description: "Swami's Portfolio site.",
+  icons: {
+    icon: "/official/logo.png",
+  },
   keywords: [
     "Frontend Developer",
     "UI/UX Designer",
