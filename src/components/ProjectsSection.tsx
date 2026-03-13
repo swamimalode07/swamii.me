@@ -1,34 +1,37 @@
-import React from "react";
-import Image from "next/image";
-import ProjectsCard from "./ProjectsCard";
+import React from 'react'
+import ProjectsRow from './ProjectsRow'
+import { projects } from '@/helpers/constants'
+import ButttonRow from './SectionHeading'
+import ProjectCard from './ProjectCard.tsx/ProjectCard'
+import ProjectsCard from './ProjectsCard'
+import { Button } from './ui/button'
+import RingButton from './RingButton'
+import Link from 'next/link'
 
 const ProjectsSection = () => {
   return (
-    <>
-      <div className="flex items-center justify-between border-b-2 border-[#1C1C1F] bg-black ">
-    
+    <div>
+      <div className='px-[4%] py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        {projects.slice(0,3).map((project) => (
+          <ProjectCard
+            key={project.id}
+            image={project.image}
+            title={project.name}
+            description={project.description}
+            liveLink={project.link}
+            githubLink={project.github}
+            status={project.status}
+            projectBg={project.projectBg || ""}
+          />
+        ))}
       </div>
+      <div className="px-[4%] flex justify-center pb-6">
+        <Link href="/projectspage">
+          <RingButton text="View All Projects" size="lg"/>
+        </Link>
+      </div>
+    </div>
+  )
+}
 
-      <ProjectsCard
-        title="Layers  Landing Page"
-        description="Animated landing page."
-        image="/layers.png"
-          url="https://landing.swamii.me/"
-      />
-      <ProjectsCard
-        title="GhostType"
-        description="Minimalist Typing website."
-        image="/ghosttype.png"
-        url="https://ghosttype.swamii.me/"
-      />
-      <ProjectsCard
-        title="Anieditor"
-        description="Anime Overlay Editor."
-        image="/anieditor.png"
-        url="https://anieditor.swamii.me/"
-      />
-    </>
-  );
-};
-
-export default ProjectsSection;
+export default ProjectsSection

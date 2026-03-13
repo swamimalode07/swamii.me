@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { GeistPixelSquare } from "geist/font/pixel";
 import "./globals.css";
-import { Space_Grotesk } from "next/font/google";
-import CustomCursor from "@/components/CustomCursor";
 import { Analytics } from "@vercel/analytics/next";
-import { Databuddy } from '@databuddy/sdk/react';
+import { Space_Grotesk } from "next/font/google";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,10 +18,9 @@ const geistMono = Geist_Mono({
 });
 
 const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-space-grotesk",
-  display: "swap",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     siteName: "Swami's Portfolio site",
     images: [
       {
-        url: "https://swamii.me/opengraphh.jpg",
+        url: "https://swamii.me/official/opengraphh.jpg",
         width: 1200,
         height: 630,
         alt: "My OG Image",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Swami's Portfolio",
     description: "This is my portfolio.",
-    images: ["https://swamii.me/opengraphh.jpg"],
+    images: ["https://swamii.me/official/opengraphh.jpg"],
     creator: "@SwamiMalode",
   },
 };
@@ -63,6 +63,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        <Script
+          data-website-id="dfid_wVN5yIAv7uo506eTbSUQ5"
+          data-domain="swamii.me"
+          src="https://datafa.st/js/script.js"
+          strategy="afterInteractive"
+        />
         <link rel="canonical" href="https://swamii.me" />
 
         <script
@@ -87,19 +93,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
       <link rel="icon" href="/logo.ico" />
 
-      <body className={` ${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} antialiased`}>
-        {children}
+      <body className={` ${geistSans.variable} ${geistMono.variable} ${GeistPixelSquare.variable} ${spaceGrotesk.variable} antialiased`}>
+        <TooltipProvider>
+             {children}
+        </TooltipProvider>
         <Analytics />
-        <Databuddy
-        clientId={process.env.NEXT_PUBLIC_DATABUDDY_CLIENT_ID || ""}
-        trackHashChanges={true}
-        trackAttributes={true}
-        trackOutgoingLinks={true}
-        trackInteractions={true}
-        trackScrollDepth={true}
-        trackWebVitals={true}
-        trackErrors={true}
-      />
         {/* <CustomCursor /> */}
       </body>
     </html>

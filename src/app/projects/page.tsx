@@ -122,7 +122,7 @@ const ProjectsPage = () => {
         <div className="border-b border-[#1C1C1F]">
           <div className="mx-auto max-w-5xl px-6 py-10">
             <div className="mb-6 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-              <h1 className="font-space-grotesk-700 text-4xl font-bold sm:text-6xl md:text-7xl lg:text-8xl">
+              <h1 className=" text-4xl font-bold sm:text-6xl md:text-7xl lg:text-8xl">
                 Projects
               </h1>
               <Link
@@ -132,7 +132,7 @@ const ProjectsPage = () => {
                 <ArrowLeft size={18} /> Back
               </Link>
             </div>
-            <p className="font-space-grotesk-400 max-w-2xl text-base text-[#666] sm:text-xl">
+            <p className=" max-w-2xl text-base text-[#666] sm:text-xl">
               All my Proof of Work at one place
             </p>
           </div>
@@ -144,7 +144,7 @@ const ProjectsPage = () => {
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`font-space-grotesk-500 rounded-full px-2.5 py-1.5 text-xs transition-all duration-300 sm:px-4 sm:py-2 sm:text-sm ${
+                className={` rounded-full px-2.5 py-1.5 text-xs transition-all duration-300 sm:px-4 sm:py-2 sm:text-sm ${
                   selectedCategory === category.id
                     ? "bg-[#1C1C1C] text-white"
                     : "text-[#666] hover:text-[#999]"
@@ -195,17 +195,17 @@ const ProjectsPage = () => {
                   </div>
 
                   <div className="absolute top-4 right-4 rounded-full bg-black/70 px-2 py-1 backdrop-blur-sm">
-                    <span className="font-space-grotesk-400 text-xs text-[#888]">
+                    <span className=" text-xs text-[#888]">
                       {project.year}
                     </span>
                   </div>
                 </div>
 
                 <div className="flex flex-1 flex-col p-6">
-                  <h3 className="font-space-grotesk-600 mb-3 text-xl font-bold transition-colors duration-300 group-hover:text-[#CCC]">
+                  <h3 className=" mb-3 text-xl font-bold transition-colors duration-300 group-hover:text-[#CCC]">
                     {project.title}
                   </h3>
-                  <p className="font-space-grotesk-400 mb-4 text-sm leading-relaxed text-[#666]">
+                  <p className=" mb-4 text-sm leading-relaxed text-[#666]">
                     {project.description}
                   </p>
 
@@ -213,7 +213,7 @@ const ProjectsPage = () => {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="font-space-grotesk-400 rounded-full border border-[#1C1C1F] bg-[#111] px-2 py-1 text-xs text-[#888]"
+                        className=" rounded-full border border-[#1C1C1F] bg-[#111] px-2 py-1 text-xs text-[#888]"
                       >
                         {tech}
                       </span>
@@ -226,7 +226,7 @@ const ProjectsPage = () => {
                         href={project.live}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-space-grotesk-500 flex flex-1 items-center justify-center gap-2 rounded-lg border border-[#333] bg-gradient-to-r from-[#1a1a1a] to-[#2a2a2a] px-4 py-2 text-sm text-white transition-all duration-300 hover:border-[#444] hover:from-[#2a2a2a] hover:to-[#3a3a3a]"
+                        className=" flex flex-1 items-center justify-center gap-2 rounded-lg border border-[#333] bg-gradient-to-r from-[#1a1a1a] to-[#2a2a2a] px-4 py-2 text-sm text-white transition-all duration-300 hover:border-[#444] hover:from-[#2a2a2a] hover:to-[#3a3a3a]"
                       >
                         <ExternalLink size={16} />
                         View Live
@@ -237,7 +237,7 @@ const ProjectsPage = () => {
                         href={`https://github.com/${project.github}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-space-grotesk-500 flex flex-1 items-center justify-center gap-2 rounded-lg border border-[#333] bg-gradient-to-r from-[#1a1a1a] to-[#2a2a2a] px-4 py-2 text-sm text-white transition-all duration-300 hover:border-[#444] hover:from-[#2a2a2a] hover:to-[#2a2a2a]"
+                        className="flex flex-1 items-center justify-center gap-2 rounded-lg border border-[#333] bg-gradient-to-r from-[#1a1a1a] to-[#2a2a2a] px-4 py-2 text-sm text-white transition-all duration-300 hover:border-[#444] hover:from-[#2a2a2a] hover:to-[#2a2a2a]"
                       >
                         <GitHubIcon width={16} />
                         <p>Github</p>

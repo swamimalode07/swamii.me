@@ -1,13 +1,20 @@
 "use client";
-import React, { useState, useEffect } from "react";
 
+import React, { useState, useEffect } from "react";
 import CommandMenu from "./CommandMenu";
 import { GitHubIcon } from "@/app/icons/Githubicon";
 import { useRouter } from "next/navigation";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [isCommandMenuOpen, setIsCommandMenuOpen] = useState<boolean>(false);
+  const [isCommandMenuOpen, setIsCommandMenuOpen] =
+    useState<boolean>(false);
+  const [stars, setStars] = useState<number | null>(null);
 
   const router = useRouter();
 
@@ -39,58 +46,68 @@ const Navbar: React.FC = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const fetchGithubStars = async () => {
+      try {
+        const response = await fetch(
+          "https://api.github.com/repos/swamimalode07/swamii.me"
+        );
+        const data = await response.json();
+        setStars(data.stargazers_count);
+      } catch (error) {
+        return null;
+      }
+    };
+    fetchGithubStars();
+  }, []);
+
   return (
-    <>
-      <div className="border-b-2 border-[#1C1C1F] bg-black">
-        <div className="flex items-center justify-between px-4 py-4 sm:px-6">
-          <p className="font-space-grotesk-700 font-sans text-lg font-semibold text-white sm:text-xl">
+    <div className="relative">
+      <div className="border-b border-borderGrey px-[2%] py-2 fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-400 z-50 bg-transparent backdrop-blur-2xl">
+        <div className="flex items-center justify-between px-4 py-3 sm:px-6">
+          <p className="font-space-grotesk text-sm font-semibold text-white sm:text-xl">
             @code by SWAMI
           </p>
 
           <div className="flex items-center gap-3 sm:gap-6 lg:gap-8">
-            <div className="hidden items-center gap-6 md:flex lg:gap-8">
+            <div className="hidden items-center gap-6 md:flex lg:gap-6">
               <button
-                className="font-space-grotesk-300 font-sans font-medium text-white transition-colors hover:text-gray-300"
-                onClick={() => router.push("/projects")}
+                className="font-sans font-medium text-white/60 hover:text-white transition-colors"
+                onClick={() => router.push("/projectspage")}
               >
                 Projects
               </button>
-              <button
-                className="font-space-grotesk-300 font-sans font-medium text-white transition-colors hover:text-gray-300"
-                onClick={() => router.push("/artgallery")}
-              >
-                Art Gallery
-              </button>
-            </div>
 
-            <button
-              onClick={toggleCommandMenu}
-              className="hidden items-center gap-3 rounded-lg border-2 border-[#252528] bg-black px-4 py-2.5 text-gray-400 transition-all duration-200 hover:border-gray-500 hover:text-gray-300 md:flex"
-            >
-              <span className="font-space-grotesk-400 text-sm font-medium">
-                Search...
-              </span>
-              <div className="flex items-center gap-1">
-                <kbd className="rounded border border-[#404044] bg-[#252528] px-2 py-1 font-mono text-xs text-gray-300">
-                  CTRL
-                </kbd>
-                <kbd className="rounded border border-[#404044] bg-[#252528] px-2 py-1 font-mono text-xs text-gray-300">
-                  K
-                </kbd>
+              <div className="hidden md:flex items-center gap-6">
+                <button
+                  className="font-sans font-medium text-white/60 hover:text-white transition-colors"
+                  onClick={() => router.push("/artgallery")}
+                >
+                  Art Gallery
+                </button>
+
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <button
+                      onClick={() =>
+                        router.push(
+                          "https://github.com/swamimalode07/swamii.me"
+                        )
+                      }
+                      className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-[#1C1C1F] transition-colors"
+                    >
+                      <GitHubIcon className="h-5 w-5 text-white/60 hover:text-white transition-colors" />
+                      <span className="text-white/60 hover:text-white text-sm">
+                        {stars ?? "--"}
+                      </span>
+                    </button>
+                  </TooltipTrigger>
+                  <TooltipContent className="bg-black border border-white/20">
+                    <p className="text-lg">{stars} stars</p>
+                  </TooltipContent>
+                </Tooltip>
               </div>
-            </button>
-
-            {/* <div className="md:hidden sm:hidden scale-75 origin-right">
-              <Searchbox />
-            </div> */}
-            <a
-              href="https://github.com/swamimalode07"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="-ml-4 flex h-7 w-7 items-center justify-center rounded-lg ring-2 ring-[#252528] transition-all duration-200 hover:bg-[#1C1C1F] hover:ring-gray-400 sm:h-8 sm:w-8 md:h-11 md:w-11"
-            >
-              <GitHubIcon className="h-4 w-4 text-white sm:h-4 sm:w-4 md:h-5 md:w-5" />
-            </a>
+            </div>
 
             <button
               onClick={toggleMenu}
@@ -125,19 +142,12 @@ const Navbar: React.FC = () => {
             <div className="space-y-1 pt-3">
               <button
                 className="block w-full rounded-lg px-3 py-3 text-left font-sans font-medium text-white transition-colors hover:bg-[#1C1C1F] hover:text-gray-300"
-                onClick={() => router.push("/projects")}
+                onClick={() => router.push("/projectspage")}
               >
                 Projects
               </button>
 
               {/* <button
-                className="block w-full text-left font-sans font-medium text-white hover:text-gray-300 transition-colors py-3 hover:bg-[#1C1C1F] rounded-lg px-3"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Art
-              </button> */}
-
-              <button
                 className="block w-full rounded-lg px-3 py-3 text-left font-sans font-medium text-white transition-colors hover:bg-[#1C1C1F] hover:text-gray-300"
                 onClick={() => {
                   setIsMenuOpen(false);
@@ -145,8 +155,9 @@ const Navbar: React.FC = () => {
                 }}
               >
                 Search
-              </button>
-               <button
+              </button> */}
+
+              <button
                 className="block w-full rounded-lg px-3 py-3 text-left font-sans font-medium text-white transition-colors hover:bg-[#1C1C1F] hover:text-gray-300"
                 onClick={() => router.push("/artgallery")}
               >
@@ -157,11 +168,11 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      <CommandMenu
+      {/* <CommandMenu
         isOpen={isCommandMenuOpen}
         onClose={() => setIsCommandMenuOpen(false)}
-      />
-    </>
+      /> */}
+    </div>
   );
 };
 
