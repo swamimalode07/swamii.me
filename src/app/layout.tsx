@@ -5,6 +5,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { Space_Grotesk } from "next/font/google";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -62,6 +63,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        <Script
+          data-website-id="dfid_wVN5yIAv7uo506eTbSUQ5"
+          data-domain="swamii.me"
+          src="https://datafa.st/js/script.js"
+          strategy="afterInteractive"
+        />
         <link rel="canonical" href="https://swamii.me" />
 
         <script
