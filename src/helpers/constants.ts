@@ -10,15 +10,15 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  // {
-  //   id: 0,
-  //   name:"VidStudio",
-  //   description:"A video editing app that allows users to create and edit videos with a variety of tools and effects.",
-  //   image: "/Project/ProjectImages/vidstudio.png",
-  //   link: "https://vidstudio.live",
-  //   status: "building",
-  //   projectBg:"/Project/ProjectBackground/vidstudio.png",
-  // },
+  {
+    id: 0,
+    name:"VidStudio",
+    description:"A video editing app that allows users to create and edit videos with a variety of tools and effects.",
+    image: "/Project/ProjectImages/vidstudio.png",
+    link: "https://vidstudio.live",
+    status: "building",
+    projectBg:"/Project/ProjectBackground/vidstudio.png",
+  },
   {
     id: 1,
     name: "GhostType",

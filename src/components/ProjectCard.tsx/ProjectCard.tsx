@@ -78,9 +78,9 @@ const ProjectCard = ({
           className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-600"
         />
         <motion.div
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 10 }}
-          whileHover={{ opacity: 1, y: -2 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y:30 }}
+          whileHover={{ opacity: 1, y: 20 }}
           transition={{ duration: 0.2 }}
           className="flex justify-center items-center"
         >
