@@ -8,7 +8,7 @@ type RingButtonSize = "sm" | "md" | "lg"
 type RingButtonProps = {
   text: string
   href?: string
-  icon?: React.ElementType
+  icon?: React.ElementType | React.ReactNode
   size?: RingButtonSize
   className?: string
   target?: string
@@ -47,17 +47,28 @@ const ringButtonSizeStyles: Record<
 const RingButton = ({ text, href, icon: Icon, size = "lg" ,className, target, rel }: RingButtonProps) => {
   const sizeStyles = ringButtonSizeStyles[size]
 
+  let iconNode = null;
+  if (Icon) {
+    if (typeof Icon === 'function') {
+      iconNode = <Icon className={sizeStyles.iconSize} />;
+    } else {
+      iconNode = React.isValidElement(Icon)
+        ? React.cloneElement(Icon as React.ReactElement<{ className?: string }>, {
+            className: cn((Icon.props as { className?: string })?.className, sizeStyles.iconSize),
+          })
+        : null;
+    }
+  }
+
   const content = (
     <>
-      {Icon && <Icon className={sizeStyles.iconSize} />}
-
-      <span className={cn(sizeStyles.textSize,)}>
+      {iconNode}
+      <span className={cn(sizeStyles.textSize)}>
         {text}
       </span>
-
       <span className="pointer-events-none absolute -inset-[4px] border border-[#1C1C1F] rounded-lg" />
     </>
-  )
+  );
 
   if (href) {
     return (

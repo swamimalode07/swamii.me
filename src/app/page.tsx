@@ -10,6 +10,7 @@ import SkillSection from "@/components/SkillsSection/SkillsSection";
 import ExperienceSection from "@/components/ExperienceSection/Experience";
 import SectionIndicator from "@/components/SectionIndicator/SectionIndicator";
 import LoadingScreen from "@/components/InitialLoadShell";
+import SponsorSection from "@/components/SponsorsSection/SponsorSection";
 
 const page = () => {
   return (
@@ -31,6 +32,10 @@ const page = () => {
             <section data-section-label="Projects section">
               <SectionHeading title="Projects" />
               <ProjectsSection />
+            </section>
+            <section data-section-label="Sponsors section">
+              <SectionHeading title="Sponsors" />
+              <SponsorSection />
             </section>
             <section data-section-label="Experience section">
               <SectionHeading title="Experience" />
