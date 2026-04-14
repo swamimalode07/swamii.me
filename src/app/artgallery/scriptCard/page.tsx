@@ -38,7 +38,7 @@ export default function Home() {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-black">
-      <div className="border bg-[#151515] border-[#232325] px-4 py-4 rounded-lg">
+      <div className=" bg-[#151515]  px-4 py-4 rounded-lg">
         <div className="border border-[#242426] py-4 pr-4 rounded-md bg-[#0E0E10]">
           <motion.svg initial="rest" animate="rest" whileHover="hover" onHoverStart={handleHoverStart} width="406" height="260" viewBox="0 0 406 260" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="327.263" y="0.25" width="74.8268" height="25.6133" rx="4.75" fill="#101214" stroke="#27282D" strokeWidth="0.5" />
@@ -64,7 +64,7 @@ export default function Home() {
               }}
               transition={{ type: "tween", ease: [0.22, 1, 0.36, 1], duration: 0.38, delay: 0.18 }}
             >
-              <path d="M90.7113 93.4646L-44.1307 163.106L90.7113 227.177L225.553 163.106L90.7113 93.4646Z" fill="#101214" stroke="#fff" />
+              <path d="M90.7113 93.4646L-44.1307 163.106L90.7113 227.177L225.553 163.106L90.7113 93.4646Z" fill="#101214" stroke="#43454A" />
             </motion.g>
             <motion.g
               initial={{
@@ -79,7 +79,7 @@ export default function Home() {
               }}
               transition={{ type: "tween", ease: [0.22, 1, 0.36, 1], duration: 0.38, delay: 0.09 }}
             >
-              <path d="M90.7113 61.8933L-44.1307 131.535L90.7113 195.605L225.553 131.535L90.7113 61.8933Z" fill="#0E0E10" stroke="#fff" strokeLinecap="round" strokeDasharray="5 5" />
+              <path d="M90.7113 61.8933L-44.1307 131.535L90.7113 195.605L225.553 131.535L90.7113 61.8933Z" fill="#101214" stroke="#43454A" strokeLinecap="round" strokeDasharray="5 5" />
             </motion.g>
             <motion.g
               initial={{
@@ -94,7 +94,7 @@ export default function Home() {
               }}
               transition={{ type: "tween", ease: [0.22, 1, 0.36, 1], duration: 0.38, delay: 0 }}
             >
-              <path d="M90.7113 30.3225L-44.1307 99.9643L90.7113 164.035L225.553 99.9643L90.7113 30.3225Z" fill="#101214" stroke="#fff" />
+              <path d="M90.7113 30.3225L-44.1307 99.9643L90.7113 164.035L225.553 99.9643L90.7113 30.3225Z" fill="#101214" stroke="#43454A" />
             </motion.g>
             <path
               d="M225.037 131.762H268.553C275.18 131.762 280.553 126.39 280.553 119.762V24.2439C280.553 17.6165 285.925 12.2439 292.553 12.2439H326.585"
