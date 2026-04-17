@@ -146,7 +146,7 @@ function Graph() {
             className="absolute left-1/2 -translate-x-1/2 whitespace-nowrap"
             style={{ top: "-42px" }}
           >
-            <div className="relative bg-[#1447E6] text-white text-xs font-medium px-3 py-1 rounded-full">
+            <div className="relative bg-[#101214] border border-[#404247] text-white text-xs font-medium px-3 py-1 rounded-full">
               {visitors.toLocaleString()} visitors
               <span
                 className="absolute left-1/2 -translate-x-1/2 top-full"
@@ -155,7 +155,7 @@ function Graph() {
                   height: 0,
                   borderLeft: "5px solid transparent",
                   borderRight: "5px solid transparent",
-                  borderTop: "5px solid #0090FF",
+                  borderTop: "5px solid #404247",
                 }}
               />
             </div>
