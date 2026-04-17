@@ -76,7 +76,7 @@ const VideoFrame: React.FC<VideoFrameProps> = ({
             href={liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group/btn flex items-center gap-2 rounded-xl border border-white/10 bg-white/10 px-3 py-2 text-white backdrop-blur-xl transition-all duration-300 hover:bg-white/20"
+            className="group/btn flex items-center gap-2 rounded-lg border border-white/10 bg-neutral-800 px-3 py-2 text-white backdrop-blur-xl transition-all duration-300 hover:bg-neutral-900"
           >
             <span className="text-xs font-medium">View Live</span>
             <ExternalLink
@@ -115,66 +115,76 @@ const VideoFrame: React.FC<VideoFrameProps> = ({
 
 const ArtGallery = () => {
   const projects = [
-    {
+      {
       id: 1,
-      videoUrl: "video/skillpill.mp4",
-      liveUrl: "https://swamii.me/artgallery/skillpill",
-      twitterUrl: "https://x.com/SwamiMalode/status/1987369556470341668?s=20",
+      videoUrl: "video/realtime.mp4",
+      liveUrl: "https://swamii.me/artgallery/realtimecard",
+  
     },
     {
       id: 2,
+      videoUrl: "video/skillpill.mp4",
+      liveUrl: "https://swamii.me/artgallery/skillpill",
+  
+    },
+    {
+      id: 3,
       videoUrl: "video/foldercomponent.mp4",
       liveUrl: "https://swamii.me/artgallery/foldercomponent",
       twitterUrl: "https://x.com/SwamiMalode/status/1987369556470341668?s=20",
     },
     {
-      id: 3,
+      id: 4,
       videoUrl: "video/card.mp4",
       liveUrl: "https://swamii.me/artgallery/cardcomponent",
-      twitterUrl: "https://swamii.me",
     }
   ];
   const router = useRouter()
 
   return (
-    <div>
-      <div className='bg-black '>
-        <Container>
-          <div className="w-full md:px-8 bg-black min-h-screen">
-            <div className="text-white px-[2%]">
-              <div className='text-lg gap-2 items-center font-semibold mt-8 mb-4 '>
-                <Link href="/" className='flex items-center gap-2'>
-                  <Button variant='primary' size="lg" ><Undo2 /> Back </Button>
-                </Link>
-              </div>
-              <div className='flex flex-col gap-4 mb-8'>
-                <div className='text-6xl pt-10 font-semibold font-space-grotesk'>
-                  Art Gallery
-                </div>
-                <div className='text-xl text-neutral-500'>
-                  Animated components that i made from Design to Code :)
-                </div>
-              </div>
-              <div>
-                <hr className='border-0.5 border-[#424244]' />
-              </div>
-              <div className="grid grid-cols-2">
-                 {projects.map((project) => (
-                  <div key={project.id} className="py-8 ">
-                    <VideoFrame
-                      videoUrl={project.videoUrl}
-                      liveUrl={project.liveUrl}
-                      twitterUrl={project.twitterUrl}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+   <div className="bg-black min-h-screen">
+  <Container>
+    <div className="w-full md:px-8">
+      <div className="text-white px-4 md:px-6 max-w-7xl mx-auto">
 
-        </Container>
+        {/* Back button */}
+        <div className="mt-8 mb-10">
+          <Link href="/">
+            <Button variant="primary" size="lg">
+              <Undo2 className="w-4 h-4 mr-2" /> Back
+            </Button>
+          </Link>
+        </div>
+
+        {/* Header */}
+        <div className="mb-8">
+          <h1 className="text-5xl md:text-6xl font-semibold font-space-grotesk mb-3">
+            Art Gallery
+          </h1>
+          <p className="text-lg text-neutral-500">
+            Animated components that i made from Design to Code :)
+          </p>
+        </div>
+
+        <hr className="border-[0.5px] border-[#424244] mb-8" />
+
+        {/* Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pb-16">
+          {projects.map((project) => (
+            <div key={project.id}>
+              <VideoFrame
+                videoUrl={project.videoUrl}
+                liveUrl={project.liveUrl}
+                twitterUrl={project.twitterUrl}
+              />
+            </div>
+          ))}
+        </div>
+
       </div>
     </div>
+  </Container>
+</div>
   );
 };
 

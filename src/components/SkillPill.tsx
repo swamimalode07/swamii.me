@@ -37,7 +37,7 @@ const SkillPill = ({ skillName, icon, visible = false }: SkillPillProps) => {
         </span>
       </div>
 
-      <span className="font-medium whitespace-nowrap">{skillName}</span>
+      <span className="font-medium whitespace-nowrap text-white">{skillName}</span>
     </div>
   );
 };
