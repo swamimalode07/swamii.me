@@ -2,6 +2,8 @@
 
 import { useRef, useState, useCallback } from "react";
 import { motion, useSpring, useMotionTemplate } from "motion/react";
+import { ArrowLeft } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const VISITOR_DATA = [
   240, 310, 280, 420, 390, 510, 480, 620, 590, 740,
@@ -53,6 +55,7 @@ function Graph() {
   const [playheadPct, setPlayheadPct] = useState(0);
   const [dotYPct, setDotYPct] = useState(0);
   const [visitors, setVisitors] = useState(0);
+  const router = useRouter()
 
   const clipX = useSpring(0, { damping: 18 });
   const clipPath = useMotionTemplate`inset(0px ${clipX}% 0px 0px)`;
@@ -78,6 +81,14 @@ function Graph() {
   }, [clipX]);
 
   return (
+    <>
+     <button
+        onClick={() => router.push('/artgallery')}
+        className="absolute top-5 left-5 flex items-center gap-2 text-white bg-white/10 hover:bg-white/20 px-4 py-2 rounded-xl backdrop-blur-lg border border-white/15 transition-all"
+      >
+        <ArrowLeft size={18} />
+        Back to Gallery
+      </button>  
     <div
       ref={wrapperRef}
       className="relative w-full select-none"
@@ -85,6 +96,7 @@ function Graph() {
       onPointerEnter={() => setHovered(true)}
       onPointerLeave={handlePointerLeave}
     >
+     
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -168,6 +180,7 @@ function Graph() {
         </div>
       )}
     </div>
+    </>
   );
 }
 
