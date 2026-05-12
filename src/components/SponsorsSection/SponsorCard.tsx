@@ -17,7 +17,7 @@ const SponsorCard = () => {
           className='object-contain rounded-t'
         />
         <p className='w-full text-center text-lg text-green-500 font-semibold border border-neutral-600 rounded-b-lg'>
-          $250
+          $500
         </p>
       </div>
       <div className='text-centers'>
