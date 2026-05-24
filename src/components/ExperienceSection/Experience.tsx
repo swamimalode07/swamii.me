@@ -5,7 +5,7 @@ const ExperienceSection = () => {
     return (
         <div className='flex flex-col py-10 '>
             <Experience
-                logo="experience/conduitLogo.png"
+                logo="experience/conduit_commerce_logo.jpg"
                 company="Conduit Commerce"
                 role="Intern"
                 duration="Aug 2025 - Present"
