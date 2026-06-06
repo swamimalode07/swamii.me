@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { GeistPixelSquare } from "geist/font/pixel";
-import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { Space_Grotesk } from "next/font/google";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Script from "next/script";
 import { Syne } from "next/font/google";
+import "@/app/globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +32,7 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: "Swami Malode",
+  title: "Swami Malode - Design Engineer ",
   description: "Swami's Portfolio site.",
   icons: {
     icon: "/official/logo.png",

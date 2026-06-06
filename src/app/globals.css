@@ -210,7 +210,6 @@
   --shadow-2xl: 0px 1px 2px 0px hsl(0 0% 0% / 0.45);
 }
 
-
 ::-webkit-scrollbar {
   display: none;
 }
@@ -221,4 +220,8 @@ html {
 
 body {
   -ms-overflow-style: none;
+}
+
+@utility link-underline {
+    @apply underline decoration-current/30 decoration-1 underline-offset-3 transition-colors hover:decoration-current;
 }
