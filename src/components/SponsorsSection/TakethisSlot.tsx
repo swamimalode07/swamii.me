@@ -10,7 +10,7 @@ const TakethisSlot = () => {
       aria-label='Open GitHub Sponsors for swamimalode07'
       className='h-full block col-span-1'
     >
-      <div className='h-full bg-grey p-4 rounded flex flex-col items-center justify-center border-2 border-dashed border-neutral-600 hover:border-white transition-all duration-300 '>
+      <div className='h-full bg-grey p-4 rounded flex flex-col items-center justify-center border-2 border-dashed border-[#1C1C1F] hover:border-neutral-700 transition-all duration-150 ease-in-out '>
         <div className='flex flex-col items-center justify-center gap-3 text-center'>
           <p className='text-xl font-semibold'>
             Take this slot

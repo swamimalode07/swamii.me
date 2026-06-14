@@ -34,10 +34,6 @@ const page = () => {
               <SectionHeading title="Projects" />
               <ProjectsSection />
             </section>
-            <section data-section-label="Sponsors section">
-              <SectionHeading title="Sponsors" />
-              <SponsorSection />
-            </section>
             <section data-section-label="Experience section">
               <SectionHeading title="Experience" />
               <ExperienceSection />
