@@ -209,7 +209,7 @@ function DropsContainer() {
     <div
       ref={containerRef}
       onClick={handleContainerClick}
-      className="w-full h-full bg-black relative cursor-crosshair select-none overflow-hidden"
+      className="w-full h-full bg-[#09090B] relative cursor-crosshair select-none overflow-hidden"
     >
       {drops.map((drop) => (
         <NumberDrop
@@ -227,7 +227,7 @@ function DropsContainer() {
 
 export default function NotFound() {
   return (
-    <main className="w-full h-screen bg-black flex flex-col items-center justify-center p-4 overflow-hidden">
+    <main className="w-full h-screen bg-[#09090B] flex flex-col items-center justify-center p-4 overflow-hidden">
       <div className="absolute inset-0 w-full h-full">
         <DropsContainer />
       </div>

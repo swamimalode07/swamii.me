@@ -7,7 +7,7 @@ const Graph = () => {
  
   return (
     <div
-      className="bg-black w-full flex justify-center items-center py-10 px-[4%]"
+      className="bg-[#09090B] w-full flex justify-center items-center py-10 px-[4%]"
     >
       <div className="w-full max-w-full overflow-hidden flex justify-center">
         <GitHubCalendar

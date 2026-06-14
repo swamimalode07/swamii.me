@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
 
   return (
     <div className="relative">
-      <div className="border-b border-borderGrey px-[2%] py-2 fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-400 z-50 bg-transparent backdrop-blur-2xl">
+      <div className="border-b-2 border-borderGrey px-[2%] py-2 fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-400 z-50 bg-transparent backdrop-blur-2xl">
         <div className="flex items-center justify-between px-4 py-3 sm:px-6">
           <p className="font-space-grotesk text-sm font-semibold text-white sm:text-xl">
             @code by SWAMI
@@ -102,7 +102,7 @@ const Navbar: React.FC = () => {
                       </span>
                     </button>
                   </TooltipTrigger>
-                  <TooltipContent className="bg-black border border-white/20">
+                  <TooltipContent className="bg-[#09090B] border border-white/20">
                     <p className="text-lg">{stars} stars</p>
                   </TooltipContent>
                 </Tooltip>

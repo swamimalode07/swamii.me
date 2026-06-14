@@ -281,7 +281,7 @@ const SkillsSection = () => {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <section className="font-space-grotesk bg-black px-[5%] py-12 sm:py-16">
+    <section className="font-space-grotesk bg-[#09090B] px-[5%] py-12 sm:py-16">
       <div className="relative flex flex-wrap gap-x-3 gap-y-8 md:gap-x-4">
         {skills.map((skill, index) => (
           <div

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { GeistPixelSquare } from "geist/font/pixel";
 import { Analytics } from "@vercel/analytics/next";
 import { Space_Grotesk } from "next/font/google";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Script from "next/script";
 import { Syne } from "next/font/google";
-import "@/app/globals.css";
+import { GeistPixelSquare, GeistPixelGrid, GeistPixelCircle, GeistPixelTriangle, GeistPixelLine } from 'geist/font/pixel';
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -106,7 +106,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
       <body className={` ${geistSans.variable} ${geistMono.variable} ${GeistPixelSquare.variable} ${spaceGrotesk.variable} ${syne.variable} antialiased`}>
         <TooltipProvider>
-             {children}
+          {children}
         </TooltipProvider>
         <Analytics />
         {/* <CustomCursor /> */}

@@ -40,9 +40,9 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="h-16 sm:h-20 md:h-24 bg-[radial-gradient(circle,#1D202A_1px,transparent_1px)] [background-size:14px_14px] sm:[background-size:16px_16px] md:[background-size:18px_18px] bg-black border-b-2 border-[#1C1C1F]"></div>
+        <div className="h-16 sm:h-20 md:h-24 bg-[radial-gradient(circle,#1D202A_1px,transparent_1px)] [background-size:14px_14px] sm:[background-size:16px_16px] md:[background-size:18px_18px] bg-[#09090B] border-b-2 border-[#1C1C1F]"></div>
 
-        <div className="bg-black px-4 sm:px-6 md:pl-4 md:px-0 py-6">
+        <div className="bg-[#09090B] px-4 sm:px-6 md:pl-4 md:px-0 py-6">
           <div className="max-w-7xl">
             <p className="text-[#494949] text-sm">
               Built with React, TypeScript & Tailwind CSS

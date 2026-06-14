@@ -19,7 +19,7 @@ const InitialLoadShell = ({ children }: InitialLoadShellProps) => {
   };
 
   return (
-    <div className="bg-black">
+    <div className="bg-[#09090B]">
       {loading && <LoadingScreen onFinish={handleLoadingFinish} />}
       {children}
       {!loading && <Taskbar />}

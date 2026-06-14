@@ -10,7 +10,7 @@ import React from 'react'
 
 const page = () => {
     return (
-        <div className='bg-black'>
+        <div className='bg-[#09090B]'>
             <Container>
                 <div className="w-full px-4 md:px-8">
                     <div className="text-white px-[2%]">

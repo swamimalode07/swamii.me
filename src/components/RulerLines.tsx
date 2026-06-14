@@ -47,8 +47,8 @@ const RulerLines = ({ variant = 'left' }: RulerLinesProps) => {
           y1={y}
           x2={x2}
           y2={y}
-          stroke="#424244"
-          strokeWidth={1}
+          stroke="#1C1C1F"
+          strokeWidth={2}
         />
       )
     }
@@ -66,14 +66,14 @@ const RulerLines = ({ variant = 'left' }: RulerLinesProps) => {
         [variant]: 0,
         height: '100%',
         width,
-        background: 'black',
+        background: '#09090B',
         userSelect: 'none',
         zIndex: 9999,
         pointerEvents: 'none',
       }}
     >
       <svg width={width} height={height} style={{ display: 'block' }}>
-        <line x1={baselineX} y1={0} x2={baselineX} y2={height} stroke="#424244" strokeWidth={1} />
+        <line x1={baselineX} y1={0} x2={baselineX} y2={height} stroke="#1C1C1F" strokeWidth={2} />
         {ticks}
       </svg>
     </div>

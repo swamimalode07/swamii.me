@@ -59,7 +59,7 @@ const ProjectCard = ({
   },[githubLink])
 
   return (
-    <div className="h-full group bg-black border border-neutral-800 ring-1 rounded-lg ring-neutral-900 hover:ring-neutral-800 transition duration-300 ring-offset-4 ring-offset-black flex flex-col">
+    <div className="h-full group bg-[#09090B] border border-neutral-800 ring-1 rounded-lg ring-neutral-900 hover:ring-neutral-800 transition duration-300 ring-offset-4 ring-offset-black flex flex-col">
 
       <div className="relative w-full md:h-52 rounded-t-lg overflow-hidden bg-neutral-900">
         {githubStar > 0 && (

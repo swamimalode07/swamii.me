@@ -15,7 +15,7 @@ const Heading: React.FC<HeadingProps> = ({ heading, showButton, buttonLink }) =>
           text-2xl sm:text-3xl md:text-4xl
           font-semibold text-white
           border-b-2 border-t-2 border-[#1C1C1F]
-          bg-black
+          bg-[#09090B]
           px-3 sm:px-[5%] py-2 md:py-3
           flex items-center justify-between
         "

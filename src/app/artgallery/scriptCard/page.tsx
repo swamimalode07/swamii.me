@@ -37,7 +37,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-black">
+    <div className="flex justify-center items-center min-h-screen bg-[#09090B]">
       <div className=" bg-[#151515]  px-4 py-4 rounded-lg">
         <div className="border border-[#242426] py-4 pr-4 rounded-md bg-[#0E0E10]">
           <motion.svg initial="rest" animate="rest" whileHover="hover" onHoverStart={handleHoverStart} width="406" height="260" viewBox="0 0 406 260" fill="none" xmlns="http://www.w3.org/2000/svg">

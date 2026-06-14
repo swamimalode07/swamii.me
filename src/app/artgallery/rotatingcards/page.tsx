@@ -202,7 +202,7 @@ export default function Circular3DCards() {
     <div className="flex h-screen items-center justify-center overflow-hidden bg-neutral-300">
          <button
         onClick={() => router.push('/artgallery')}
-        className="absolute top-5 left-5 flex items-center gap-2 text-white bg-black/50 hover:bg-black/60 px-4 py-2 rounded-xl backdrop-blur-lg border border-black/15 transition-all"
+        className="absolute top-5 left-5 flex items-center gap-2 text-white bg-[#09090B]/50 hover:bg-[#09090B]/60 px-4 py-2 rounded-xl backdrop-blur-lg border border-black/15 transition-all"
       >
         <ArrowLeft size={18} />
         Back to Gallery

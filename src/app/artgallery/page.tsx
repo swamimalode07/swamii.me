@@ -159,7 +159,7 @@ const ArtGallery = () => {
   const router = useRouter()
 
   return (
-    <div className="bg-black min-h-screen">
+    <div className="bg-[#09090B] min-h-screen">
       <Container>
         <div className="w-full md:px-8">
           <div className="text-white px-4 md:px-6 max-w-7xl mx-auto">

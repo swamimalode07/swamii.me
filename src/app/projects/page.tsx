@@ -117,8 +117,8 @@ const ProjectsPage = () => {
       : projects.filter((project) => project.category === selectedCategory);
 
   return (
-    <div className="font-space-grotesk mx-auto bg-black bg-[repeating-linear-gradient(45deg,#000_0px,#000_7px,#1C1C1F_7px,#1C1C1F_8px)]">
-      <div className="mx-auto w-[80%] border-r-2 border-l-2 border-[#1C1C1F] bg-black text-white">
+    <div className="font-space-grotesk mx-auto bg-[#09090B] bg-[repeating-linear-gradient(45deg,#000_0px,#000_7px,#1C1C1F_7px,#1C1C1F_8px)]">
+      <div className="mx-auto w-[80%] border-r-2 border-l-2 border-[#1C1C1F] bg-[#09090B] text-white">
         <div className="border-b border-[#1C1C1F]">
           <div className="mx-auto max-w-5xl px-6 py-10">
             <div className="mb-6 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
@@ -171,7 +171,7 @@ const ProjectsPage = () => {
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
 
-                  <div className="absolute inset-0 flex items-center justify-center gap-4 bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div className="absolute inset-0 flex items-center justify-center gap-4 bg-[#09090B]/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     {project.github && (
                       <a
                         href={`https://github.com/${project.github}`}
@@ -194,7 +194,7 @@ const ProjectsPage = () => {
                     )}
                   </div>
 
-                  <div className="absolute top-4 right-4 rounded-full bg-black/70 px-2 py-1 backdrop-blur-sm">
+                  <div className="absolute top-4 right-4 rounded-full bg-[#09090B]/70 px-2 py-1 backdrop-blur-sm">
                     <span className=" text-xs text-[#888]">
                       {project.year}
                     </span>

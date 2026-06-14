@@ -39,7 +39,7 @@ const ProjectsCard: React.FC<ProjectsCardProps> = ({
     <div className="relative font-space-grotesk">
       <div
         ref={cardRef}
-        className={`relative bg-black pb-6 transition-all duration-300 ${url ? "cursor-pointer" : ""} `}
+        className={`relative bg-[#09090B] pb-6 transition-all duration-300 ${url ? "cursor-pointer" : ""} `}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onMouseMove={handleMouseMove}

@@ -27,7 +27,7 @@ const ExperienceSection: React.FC<ExperienceProps> = ({
   const toggleExpansion = () => setIsExpanded((prev) => !prev);
 
   return (
-    <div className="font-space-grotesk border-b border-[#1C1C1F] bg-black focus:outline-none">
+    <div className="font-space-grotesk border-b border-[#1C1C1F] bg-[#09090B] focus:outline-none">
       <div
         onClick={toggleExpansion}
         onKeyDown={(e) => {
@@ -35,7 +35,7 @@ const ExperienceSection: React.FC<ExperienceProps> = ({
         }}
         role="button"
         tabIndex={0}
-        className="group flex cursor-pointer items-center gap-4 bg-black px-4 py-6 text-white transition-colors duration-200 select-none hover:bg-[#0e0e0f] sm:px-[5%] sm:py-10 focus:outline-none"
+        className="group flex cursor-pointer items-center gap-4 bg-[#09090B] px-4 py-6 text-white transition-colors duration-200 select-none hover:bg-[#0e0e0f] sm:px-[5%] sm:py-10 focus:outline-none"
       >
         <div className="h-14 w-14 flex-shrink-0 rounded-lg border border-[#2A2A2D] bg-[#18181B] p-1 shadow-sm transition group-hover:border-[#444446]">
           <a href={link} target="_blank" rel="noopener noreferrer">
@@ -74,7 +74,7 @@ const ExperienceSection: React.FC<ExperienceProps> = ({
               duration: 0.6,
               ease: [0.25, 0.1, 0.25, 1],
             }}
-            className="overflow-hidden bg-black px-4 text-white sm:px-[5%]"
+            className="overflow-hidden bg-[#09090B] px-4 text-white sm:px-[5%]"
           >
             <motion.div
               initial={{ y: -5, opacity: 0 }}

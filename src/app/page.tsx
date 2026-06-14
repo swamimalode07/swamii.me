@@ -21,7 +21,7 @@ const page = () => {
           <SectionIndicator />
         </div> */}
         <div className="w-full md:px-8">
-          <div className="text-white">
+          <div className="text-white bg-[#09090B]">
             <Navbar />
             <section data-section-label="Hero section">
               <HeroSection />

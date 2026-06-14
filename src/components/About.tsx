@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section className="bg-black text-gray-300">
+    <section className="bg-[#09090B] text-gray-300">
       <div className="px-[4%] py-10 md:py-15">
         <p className="mb-4 sm:mb-4 leading-relaxed text-base sm:text-lg md:text-xl text-[#A6A6A6]">
           Heyy!! I’m a <span className="text-neutral-300">Design Engineer</span> and a <span className="text-neutral-300">Full Stack Developer</span>.
@@ -21,7 +21,7 @@ const About = () => {
             rel="noopener noreferrer"
             className="mx-1 inline-flex"
           >
-            <span className="inline-flex items-center gap-2 bg-black border border-neutral-700 px-2  rounded-lg hover:text-white md:text-lg font-sans shadow-[inset_0_0_12px_rgba(115,115,115,0.6)] hover:shadow-[inset_0_0_12px_rgba(139,92,246,0.6)] transition-all duration-200 font-semibold hover:border-purple-800` ml-1 mr-1">
+            <span className="inline-flex items-center gap-2 bg-[#09090B] border border-neutral-700 px-2  rounded-lg hover:text-white md:text-lg font-sans shadow-[inset_0_0_12px_rgba(115,115,115,0.6)] hover:shadow-[inset_0_0_12px_rgba(139,92,246,0.6)] transition-all duration-200 font-semibold hover:border-purple-800` ml-1 mr-1">
               <Image
                 src="/official/vidstudioLogo.png"
                 alt="VidStudio"
