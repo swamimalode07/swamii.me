@@ -49,7 +49,7 @@ const Experience = ({
 }, [points, skills]);
 
   return (
-    <div className="px-4 md:px-[4%]">
+    <div className="px-4 md:px-[3%]">
       <div
         onClick={() => setOpen((prev) => !prev)}
         className={`group border border-white/10 bg-transparent backdrop-blur-xl overflow-hidden transition-all duration-150 ${getRoundedClass(

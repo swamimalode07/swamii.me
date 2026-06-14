@@ -11,7 +11,7 @@ import Link from 'next/link'
 const ProjectsSection = () => {
   return (
     <div>
-      <div className='px-[4%] py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+      <div className='px-[3%] py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
         {projects.slice(0,3).map((project) => (
           <ProjectCard
             key={project.id}

@@ -61,7 +61,7 @@ const ContactSection = () => {
 
   return (
     <section className="relative overflow-hidden bg-[#09090B] text-white">
-      <div className="px-[5%] pt-20 pb-0 sm:pt-24">
+      <div className="px-[3%] pt-20 pb-0 sm:pt-24">
         {/* columned link footer */}
         <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4">
           {columns.map((col) => (
