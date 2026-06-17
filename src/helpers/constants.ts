@@ -16,7 +16,7 @@ export const projects: Project[] = [
     description:"A video editing app that allows users to create and edit videos with a variety of tools and effects.",
     image: "/Project/ProjectImages/vidstudio.png",
     link: "https://vidstudio.live",
-    status: "building",
+    status: "live",
     projectBg:"/Project/ProjectBackground/vidstudio.png",
   },
   {
