@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { Space_Grotesk } from "next/font/google";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 import Script from "next/script";
 import { Syne } from "next/font/google";
 import { GeistPixelSquare, GeistPixelGrid, GeistPixelCircle, GeistPixelTriangle, GeistPixelLine } from 'geist/font/pixel';
@@ -108,6 +109,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <TooltipProvider>
           {children}
         </TooltipProvider>
+        {/* soft blur that fades page content into the bottom edge of the viewport */}
+        <ProgressiveBlur position="bottom" height="7rem" className="fixed z-30" />
         <Analytics />
         {/* <CustomCursor /> */}
       </body>
