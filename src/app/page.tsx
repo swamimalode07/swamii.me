@@ -26,17 +26,17 @@ const page = () => {
             <section data-section-label="Hero section">
               <HeroSection />
             </section>
-            <section data-section-label="Skills section">
-              <SectionHeading title="Skills" />
-              <SkillSection />
-            </section>
             <section data-section-label="Projects section">
               <SectionHeading title="Projects" />
               <ProjectsSection />
             </section>
-            <section data-section-label="Experience section">
+              <section data-section-label="Experience section">
               <SectionHeading title="Experience" />
               <ExperienceSection />
+            </section>
+            <section data-section-label="Skills section">
+              <SectionHeading title="Skills" />
+              <SkillSection />
             </section>
             <section data-section-label="Github section">
               <SectionHeading title="Github Graph" />

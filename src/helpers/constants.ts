@@ -21,13 +21,14 @@ export const projects: Project[] = [
   },
   {
     id: 1,
-    name: "GhostType",
-    description:"A minimalistic typing test app designed to improve typing speed and accuracy with a dynamic leaderboard.",
-    image: "/Project/ProjectImages/ghosttype.png",
-    link: "https://ghosttype.swamii.me",
-    github: "https://github.com/swamimalode07/ghosttype",
-     status: "live",
-     projectBg:"/Project/ProjectBackground/ghosttype.png"
+    name: "Rareui",
+    description:
+      "A collection of rare, ready-to-use UI components and animations you can actually drop into your next project.",
+    image: "/Project/ProjectImages/Rare-ui.png",
+    link: "https://rareui.swamii.me",
+    github: "https://github.com/swamimalode07/rare-ui",
+    status: "live",
+    projectBg: "/Project/ProjectBackground/mach.png",
   },
   {
     id: 2,
@@ -42,6 +43,16 @@ export const projects: Project[] = [
   },
   {
     id: 3,
+    name: "GhostType",
+    description:"A minimalistic typing test app designed to improve typing speed and accuracy with a dynamic leaderboard.",
+    image: "/Project/ProjectImages/ghosttype.png",
+    link: "https://ghosttype.swamii.me",
+    github: "https://github.com/swamimalode07/ghosttype",
+     status: "live",
+     projectBg:"/Project/ProjectBackground/ghosttype.png"
+  },
+  {
+    id: 4,
     name: "Anieditor",
     description:
       "An app that lets users apply anime overlays and custom images on top of their photos.",
@@ -52,7 +63,7 @@ export const projects: Project[] = [
     projectBg: "/Project/ProjectBackground/anieditor.png"
   },
   {
-    id: 4,
+    id: 5,
     name: "ClearStatus",
     description:
       "A multi-tenant status page for SaaS teams to share incidents, maintenance, and uptime updates.",
@@ -63,7 +74,7 @@ export const projects: Project[] = [
     projectBg: "/Project/ProjectBackground/clearstatus.png"
   },
   {
-    id: 5,
+    id: 6,
     name: "Simon Game",
     description:
       "An interactive memory game with a competitive leaderboard system.",
@@ -74,7 +85,7 @@ export const projects: Project[] = [
     projectBg: "/Project/ProjectBackground/simon.png"
   },
   {
-    id: 6,
+    id: 7,
     name: "Mach5 Software",
     description:
       "Frontend development work transforming Figma designs into fully responsive web pages.",
