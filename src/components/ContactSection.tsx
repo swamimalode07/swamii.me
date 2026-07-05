@@ -144,7 +144,7 @@ const ContactSection = () => {
       {/* giant clipped wordmark bleeding off the bottom edge */}
       <p
         aria-hidden="true"
-        className="pointer-events-none mt-16 -mb-[0.22em] text-center font-space-grotesk text-[27vw] leading-[0.7] font-bold tracking-tighter text-[#141418] select-none"
+        className="pointer-events-none mt-16 -mb-[0.22em] text-center font-space-grotesk text-[clamp(2.5rem,26vw,30rem)] leading-[0.7] font-bold tracking-tighter text-[#141418] select-none"
         >
         SWAMI
       </p>
