@@ -11,7 +11,7 @@ import ExperienceSection from "@/components/ExperienceSection/Experience";
 import SectionIndicator from "@/components/SectionIndicator/SectionIndicator";
 import LoadingScreen from "@/components/InitialLoadShell";
 import SponsorSection from "@/components/SponsorsSection/SponsorSection";
-import GithubContributionsDemo from "@/components/GithubContributions"
+import GithubActivityCard from "@/components/GithubActivityCard"
 
 const page = () => {
   return (
@@ -40,7 +40,7 @@ const page = () => {
             </section>
             <section data-section-label="Github section">
               <SectionHeading title="Github Graph" />
-              <GithubContributionsDemo />
+              <GithubActivityCard />
             </section>
             <section data-section-label="About section">
               <SectionHeading title="About Me" />
