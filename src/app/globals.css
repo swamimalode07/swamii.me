@@ -87,9 +87,15 @@
     color: #ffffff;
   }
 
+  html {
+    color-scheme: dark;
+    background-color: #09090b;
+  }
+
   body {
     letter-spacing: var(--tracking-normal);
-    @apply bg-background text-foreground;
+    background-color: #09090b;
+    @apply text-foreground;
   }
 
   * {
