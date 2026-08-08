@@ -102,8 +102,8 @@ const Navbar: React.FC = () => {
                       </span>
                     </button>
                   </TooltipTrigger>
-                  <TooltipContent className="bg-[#09090B] border border-white/20">
-                    <p className="text-lg">{stars} stars</p>
+                  <TooltipContent className="rounded-lg bg-[#fafafa] px-[17px] py-[9px] text-[15px] leading-[18px] font-medium text-[#09090b] shadow-lg">
+                    {stars?.toLocaleString() ?? "--"} star{stars === 1 ? "" : "s"}
                   </TooltipContent>
                 </Tooltip>
               </div>

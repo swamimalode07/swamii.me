@@ -174,7 +174,7 @@ async function fetchRepos(login: string): Promise<RepoContribution[]> {
     });
 }
 
-function useGitHubUser(login?: string) {
+function useGitHubUser(login?: string, skipRepos?: boolean) {
   const [data, setData] = React.useState<{
     contributions: Contribution[];
     repos: RepoContribution[];
@@ -184,7 +184,11 @@ function useGitHubUser(login?: string) {
     if (!login) return;
     let active = true;
 
-    Promise.all([fetchCalendar(login), fetchRepos(login)])
+    // settled, not all: a failed repo lookup must not discard the calendar
+    Promise.all([
+      fetchCalendar(login).catch(() => null),
+      skipRepos ? [] : fetchRepos(login).catch(() => []),
+    ])
       .then(([contributions, repos]) => {
         if (active && contributions) setData({ contributions, repos });
       })
@@ -193,7 +197,7 @@ function useGitHubUser(login?: string) {
     return () => {
       active = false;
     };
-  }, [login]);
+  }, [login, skipRepos]);
 
   return data;
 }
@@ -534,7 +538,10 @@ const GitHubActivity = ({
   };
 
   const needsFetch = !contributionsProp.length || !reposProp.length;
-  const fetched = useGitHubUser(needsFetch ? username : undefined);
+  const fetched = useGitHubUser(
+    needsFetch ? username : undefined,
+    reposProp.length > 0,
+  );
   const placeholder = React.useMemo(
     () => (username ? emptyDays(weeksFor(months)) : []),
     [username, months],

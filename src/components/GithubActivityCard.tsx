@@ -47,6 +47,7 @@ const REPOS = [
 const WEEKS = 53
 const CARD_PADDING = 32
 const MIN_CELL = 11
+const MAX_CELL = 64
 const CELL_STEP = 0.25
 const SAFETY = 1
 
@@ -60,7 +61,7 @@ const widthFor = (cell: number) => {
 const fitCell = (available: number) => {
   const cap = available - SAFETY
   let best = MIN_CELL
-  for (let cell = MIN_CELL; widthFor(cell) <= cap; cell += CELL_STEP) {
+  for (let cell = MIN_CELL; cell <= MAX_CELL && widthFor(cell) <= cap; cell += CELL_STEP) {
     best = cell
   }
   return best
